@@ -1,0 +1,150 @@
+﻿@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_black.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+		font-display: swap;
+}
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_bold.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+		font-display: swap;
+}
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_semibold.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+		font-display: swap;
+}
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_regular.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+		font-display: swap;
+}
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_light.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+		font-display: swap;
+}
+@font-face {
+    font-family: 'proxima_nova';
+    src: url('../fonts/proxima/proxima_nova_thin.woff2') format('woff2'),
+         url('../fonts/proxima/proxima_nova_thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+		font-display: swap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('../fonts/icomoon/icomoon.ttf?x2ewfo') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?x2ewfo') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?x2ewfo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\e901";
+}
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-angle-up:before {
+  content: "\e903";
+}
+.icon-arrow-down:before {
+  content: "\e904";
+}
+.icon-arrow-left:before {
+  content: "\e905";
+}
+.icon-arrow-right:before {
+  content: "\e906";
+}
+.icon-arrow-up:before {
+  content: "\e907";
+}
+.icon-close:before {
+  content: "\e908";
+}
+.icon-enter:before {
+  content: "\e909";
+}
+.icon-exit:before {
+  content: "\e90a";
+}
+.icon-eye:before {
+  content: "\e90b";
+}
+.icon-magnify:before {
+  content: "\e90c";
+}
+.icon-map-marker:before {
+  content: "\e90d";
+}
+.icon-menu:before {
+  content: "\e90e";
+}
+.icon-calendar:before {
+  content: "\e90f";
+}
+.icon-comment:before {
+  content: "\e910";
+}
+.icon-copy:before {
+  content: "\e911";
+}
+.icon-libra:before {
+  content: "\e912";
+}
+.icon-paperclip:before {
+  content: "\e913";
+}
+.icon-pdf:before {
+  content: "\e914";
+}
+.icon-percent:before {
+  content: "\e915";
+}
+.icon-signature:before {
+  content: "\e916";
+}
+.icon-umbrella:before {
+  content: "\e917";
+}
+.icon-upload:before {
+  content: "\e918";
+}
