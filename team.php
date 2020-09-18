@@ -15,38 +15,22 @@
 					<div class="page-head">
 						<h1 class="page-head__title">Команда</h1>
 					</div>
-					<div class="text-block text-block--small-gap">
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th width="240">Руководитель</th>
-										<th width="240">Должность</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<strong>Чуйко Андрей Александрович</td>
-										<td>Генеральный директор</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>Никифоров Евгений Андреевич</strong></td>
-										<td>Заместитель Генерального директора – Финансовый директор</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>Чепурин Андрей Викторович</strong></td>
-										<td>Заместитель Генерального директора</td>
-									</tr>
-									<tr>
-										<td>
-											<strong>Рубина Мария Николаевна</strong></td>
-										<td>Главный бухгалтер</td>
-									</tr>
-								</tbody>
-							</table>
+					<div class="management">
+						<div class="management__text">
+							<p>Reprehenderit in voluptate velit esse cillum dolore sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="box management__box">
+							<?for($i=0;$i<8;$i++):?>
+								<div class="person-card">
+									<div class="person-card__pic">
+										<img src="img/team/<?=$i;?>.jpg" alt="">
+									</div>
+									<div class="person-card__text">
+										<h3 class="person-card__title">Жук Анастасия</h3>
+										<p>Генеральный директор</p>
+									</div>
+								</div>
+							<?endfor?>
 						</div>
 					</div>
 				</div>

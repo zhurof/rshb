@@ -20,8 +20,8 @@
 							<table>
 								<thead>
 									<tr>
-										<th width="240">Руководитель</th>
-										<th width="240">Должность</th>
+										<th width="200">Руководитель</th>
+										<th width="200">Должность</th>
 									</tr>
 								</thead>
 								<tbody>

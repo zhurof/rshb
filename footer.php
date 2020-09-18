@@ -1,31 +1,35 @@
 	<footer class="footer">
 		<div class="wrapper">
 			<div class="box footer__box">
-				<div class="footer__column">
-					<a href="/" class="logo footer__logo"><img src="img/logo-green.svg" alt=""></a>
-					<div class="footer__phone">
-						<a href="tel:88005008778" class="footer__phone-number">8 800 500 87 78</a>
-						<div class="footer__phone-caption">Звонок по России бесплатный</div>
+				<div class="footer__column footer__column--main">
+					<div class="footer__mobile-column">
+						<a href="/" class="logo footer__logo"><img src="img/logo-green.svg" alt=""></a>
+						<div class="footer__phone">
+							<a href="tel:88005008778" class="footer__phone-number">8 800 500 87 78</a>
+							<div class="footer__phone-caption">Звонок по России бесплатный</div>
+						</div>
+						<div class="footer__address">119034, г. Москва, Гагаринский переулок, дом 3</div>
+						<div class="footer__social">
+							<a href="https://vk.com" class="soc-link fa-vk" target="_blank"></a>
+							<a href="https://facebook.com" class="soc-link fa-facebook" target="_blank"></a>
+							<a href="https://twitter.com" class="soc-link fa-twitter" target="_blank"></a>
+						</div>
+						<div class="footer__text">
+							<p>Лицензия СЖ № 43 58 (вид деятельности: добровольное личное страхование, за исключением добровольного страхования жизни), выданы Банком России 19 января 2018 года без ограничения срока действия.</p>
+						</div>
 					</div>
-					<div class="footer__address">119034, г. Москва, Гагаринский переулок, дом 3</div>
-					<div class="footer__social">
-						<a href="https://vk.com" class="soc-link fa-vk" target="_blank"></a>
-						<a href="https://facebook.com" class="soc-link fa-facebook" target="_blank"></a>
-						<a href="https://twitter.com" class="soc-link fa-twitter" target="_blank"></a>
+					<div class="footer__mobile-column">
+						<div class="footer__buttons">
+							<a href="javascript:;" class="btn btn--image footer__btn"><img src="img/app-store.svg" alt=""></a>
+							<a href="javascript:;" class="btn btn--image footer__btn"><img src="img/google-play.svg" alt=""></a>						
+						</div>
+						<ul class="footer__nav">
+							<li><a href="sitemap.php">Карта сайта</a></li>
+							<li><a href="javascript:;">Версия для слабовидящих</a></li>
+							<li><a href="javascript:;">Пользовательское соглашение</a></li>
+						</ul>
+						<div class="footer__copyright">© 2020 ООО «РСХБ–Страхование жизни»</div>
 					</div>
-					<div class="footer__text">
-						<p>Лицензия СЖ № 43 58 (вид деятельности: добровольное личное страхование, за исключением добровольного страхования жизни), выданы Банком России 19 января 2018 года без ограничения срока действия.</p>
-					</div>
-					<div class="footer__buttons">
-						<a href="javascript:;" class="btn btn--image footer__btn"><img src="img/app-store.svg" alt=""></a>
-						<a href="javascript:;" class="btn btn--image footer__btn"><img src="img/google-play.svg" alt=""></a>						
-					</div>
-					<ul class="footer__nav">
-						<li><a href="sitemap.php">Карта сайта</a></li>
-						<li><a href="javascript:;">Версия для слабовидящих</a></li>
-						<li><a href="javascript:;">Пользовательское соглашение</a></li>
-					</ul>
-					<div class="footer__copyright">© 2020 ООО «РСХБ–Страхование жизни»</div>
 				</div>
 				<div class="footer__column footer__column--big">
 					<ul class="footer__menu">
@@ -89,86 +93,60 @@
 		</div>
 	</footer>
 	
-	<div class="feedback feedback--modal" id="feedback">
-		<h2 class="feedback__modal-title">Форма обратной связи</h2>
-		<ul class="feedback__nav feedback__nav--small">
+	<div class="feedback" id="feedback">
+		<h2 class="feedback__title">Форма обратной связи</h2>
+		<ul class="feedback__nav">
 			<li class="active">Задать вопрос</li>
 			<li>Качество обслуживания</li>
 			<li>Направить предложение</li>
 		</ul>
 		<div class="feedback__body">
-			<form action="" class="feedback__tab" style="display:block">
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">1. Тема обращения</h3>
-					<div class="select" tabindex="0">
-						<select class="select__input" tabindex="-1">
-							<option selected disabled>Выберите из списка</option>
-							<option>Тема 1</option>
-							<option>Тема 2</option>
-						</select>
-						<div class="select__output">Выберите из списка</div>
-						<ul class="select__list">
-							<li>Тема 1</li>
-							<li>Тема 2</li>
-						</ul>
-					</div>					
-				</div>
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">2. Личные данные</h3>
-					<input type="text" placeholder="Фамилия Имя Отчество">
-					<input type="text" placeholder="Город обслуживания*" required>
-					<input type="tel" placeholder="Телефон*" required>
-					<input type="email" placeholder="Электронная почта*" required>								
-				</div>
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">3. Текст обращения</h3>
-					<textarea rows="6" placeholder="При наличии укажите номер договора"></textarea>
-					<label class="file-field">
-						<input type="file" class="file-field__input" />
-						<span class="file-field__title"><i class="icon-paperclip"></i> Прикрепить файлы (png, jpg)</span>
-						<span class="file-field__text">Вы можете прикрепить файлы формата doc, docx, png, jpg, pdf, txt размером не&nbsp;более 20Мб</span>
-					</label>
-				</div>
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">4. Согласие на обработку персональных данных</h3>
-					<label class="option feedback__option">
-						<input type="checkbox" required checked />
-						<span>Согласен на <a href="javascript:;">обработку персональных данных</a> *</span>
-					</label>
-				</div>
-				<button class="btn btn--big btn--green feedback__btn">Отправить</button>
-				<div class="feedback__note">* Обязательные поля</div>
-			</form>
-			<form action="" class="feedback__tab">
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">1. Текст обращения</h3>
-					<textarea rows="6" placeholder="При наличии укажите номер договора"></textarea>
-				</div>
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">2. Согласие на обработку персональных данных</h3>
-					<label class="option">
-						<input type="checkbox" required checked />
-						<span>Согласен на <a href="javascript:;">обработку персональных данных</a> *</span>
-					</label>
-				</div>
-				<button class="btn btn--big btn--green feedback__btn">Отправить</button>
-				<div class="feedback__note">* Обязательные поля</div>
-			</form>
-			<form action="" class="feedback__tab">
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">1. Текст обращения</h3>
-					<textarea rows="6" placeholder="При наличии укажите номер договора"></textarea>
-				</div>
-				<div class="feedback__fieldset">
-					<h3 class="feedback__legend">2. Согласие на обработку персональных данных</h3>
-					<label class="option">
-						<input type="checkbox" required checked />
-						<span>Согласен на <a href="javascript:;">обработку персональных данных</a> *</span>
-					</label>
-				</div>
-				<button class="btn btn--big btn--green feedback__btn">Отправить</button>
-				<div class="feedback__note">* Обязательные поля</div>
-			</form>
+			<?for($i=0;$i<3;$i++):?>
+				<form action="" class="feedback__tab" <?=$i?'':'style="display:block"';?>>
+					<div class="feedback__fieldset">
+						<h3 class="feedback__legend">Тема обращения</h3>
+						<div class="select" tabindex="0">
+							<select class="select__input" tabindex="-1">
+								<option selected disabled>Выберите из списка</option>
+								<option>Накопительное страхование жизни</option>
+								<option>Инвестиционное страхование жизни</option>
+								<option>Программы здоровья</option>
+							</select>
+							<div class="select__output">Выберите из списка</div>
+							<ul class="select__list">
+								<li>Инвестиционное страхование жизни</li>
+								<li>Инвестиционное страхование жизни</li>
+								<li>Программы здоровья</li>
+							</ul>
+						</div>					
+					</div>
+					<div class="feedback__fieldset">
+						<h3 class="feedback__legend">Текст обращения</h3>
+						<textarea rows="6" placeholder="При наличии укажите номер договора"></textarea>
+						<label class="file-field">
+							<input type="file" class="file-field__input" />
+							<span class="file-field__title"><i class="icon-paperclip"></i> Прикрепить файлы (png, jpg)</span>
+							<span class="file-field__text">Вы можете прикрепить файлы формата doc, docx, png, jpg, pdf, txt размером не&nbsp;более 20Мб</span>
+						</label>
+					</div>
+					<div class="feedback__fieldset">
+						<h3 class="feedback__legend">Личные данные</h3>
+						<input type="text" placeholder="Фамилия Имя Отчество*" required>
+						<input type="text" placeholder="Номер договора">
+						<input type="text" placeholder="Город обслуживания*" required>
+						<input type="tel" placeholder="Телефон*" required>
+						<input type="email" placeholder="Электронная почта*" required>								
+						<div class="feedback__footer">
+							<label class="option feedback__option">
+								<input type="checkbox" required checked />
+								<span>Согласен на <a href="javascript:;">обработку персональных данных</a> *</span>
+							</label>
+							<button class="btn btn--big btn--green feedback__btn">Отправить</button>
+							<div class="feedback__note">* Обязательные поля</div>
+						</div>
+					</div>
+				</form>
+			<?endfor;?>
 		</div>
 	</div>
 	

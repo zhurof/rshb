@@ -10,12 +10,14 @@
 		</ul>
 		<script>
 			//демонстрацонный скрипт присвоения класса активному пункту меню. Снести после реализации на backend
-			document.querySelectorAll('.menu-widget a').forEach(function(el){
+			var menuLinks = document.querySelectorAll('.menu-widget a');
+			for(var i = 0;i< menuLinks.length; i++){
+				var el = menuLinks[i];
 				if(el.href == location.href){
 					el.parentElement.classList.add('active');
 					el.href = "javascript:;"
 				}
-			})
+			}
 		</script>
 		<div class="contact-widget">
 			<div class="contact-widget__text">

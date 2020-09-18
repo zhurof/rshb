@@ -47,6 +47,7 @@
 			z-index: 1
 			left: 100%
 			bottom: 100%
+			font-size: 14px
 			line-height: normal
 			padding: 1em
 			border-radius: .3em
@@ -95,13 +96,17 @@
 						border-color: #fff
 				&.active>a:before
 					border-color: #fff
+		&__menu
+			+scrollbar
 		&__menu-list
 			a:hover
 				color: $green
 			>li
 				>a:not(:only-child)
-					pointer-events: none
-			
+					pointer-events: none					
+	.location
+		&__body
+			+scrollbar
 	.top-block
 		&__arrow
 			transition: all .3s ease
@@ -114,16 +119,28 @@
 		&:hover
 			background-color: transparentize($yellow,.3)
 	.post-card
+		&__pic
+			transition: all .2s ease
+		&:hover &__pic
+			color: $green
+		&__link
+			transition: all .2s ease
+			&:hover
+				text-decoration: underline
 		&__title
 			a
 				transition: all .3s ease
 				&:hover
 					color: $green
+			&--no-hover a:hover
+				color: inherit
+	.table-wrapper
+		+scrollbar-simple
 	.breadcrumbs
 		a
 			transition: all .2s ease
 			&:hover
-				color: #262626
+				color: #262626	
 	.menu-widget
 		>li
 			>a
@@ -139,15 +156,9 @@
 					color: #fff
 	.category-card
 		&__title
-			a
-				transition: all .2s ease
-				&:hover
-					color: $green
-		&__menu
-			a
-				transition: all .2s ease
-				&:hover
-					color: inherit
+			transition: all .2s ease
+		&:hover &__title
+			color: $green
 	.faq
 		&__question
 			a
@@ -179,6 +190,21 @@
 				transition: all .3s ease
 				&:hover
 					color: $green
+	.share
+		&__link
+			transition: all .2s ease
+			&:hover
+				border-color: $green
+				background-color: $green
+				color: #fff				
+	.accordion
+		&__trigger:hover		
+			span				
+				text-decoration: none
+			&:after
+				border-color: #808080
+				background-color: #808080
+				color: #fff					
 	.soc-link
 		transition: all .2s ease
 		&:hover
@@ -202,7 +228,7 @@
 				right: -15px
 @media(max-width: 1519px)
 	body
-		font-size: 20px
+		font-size: 18px
 	h1,h2
 		font-size: 48px
 	td,th
@@ -212,7 +238,12 @@
 			padding-left: 30px
 		&:last-child
 			padding-right: 30px
-		
+	ul
+		list-style-image: url(../img/list-marker-18.svg)
+		padding-left: 1em
+	.file-link
+		font-size: 16px
+		padding: 20px 50px 20px 100px
 	.wrapper
 		max-width: 1200px
 	.menu-btn
@@ -236,13 +267,16 @@
 			&-list
 				>li>a
 					font-size: 18px
+	.location
+		&__list
+			font-size: 18px
 	.top-block
 		&__arrow
 			&--prev
 				left: calc(50% - 585px)
 			&--next
 				right: calc(50% - 585px)
-	.about
+	.about-block
 		padding: 100px 0 50px
 		&__head
 			width: 420px
@@ -280,44 +314,109 @@
 	.faq
 		&__item
 			width: 570px
-	.category-card
-		width: 570px
-		padding: 40px
-		&__link
-			bottom: 60px
-			right: 40px
+	.breadcrumbs
+		font-size: 16px
+		padding: 50px 0 30px
+	.page-head
+		margin: 0 0 25px
+		&__subtitle
+			font-size: 20px
 	.text-block
 		padding-bottom: 60px
 		&--small-gap
 			padding-bottom: 30px
 	.sidebar-page
 		padding: 0 0 60px
+		&:last-child
+			padding-bottom: 120px
 		&__main
 			padding-right: 30px
+	.menu-widget
+		font-size: 18px
+		padding: 1.5em 0
+		>li
+			margin: 0 0 .75em
+			>a
+				padding: .3em 1em
+	.contact-widget
+		padding: 36px 28px
+	.card
+		width: 363px
+		padding: 24px
+		min-height: 0
+		&--small
+			padding: 20px
+			width: 330px
+		&__img
+			width: 86px
+	.category
+		padding: 0 0 60px
+	.gray-text
+		padding: 50px 60px 50px 0
 	.info-block
 		&__tab
+			padding: 32px
 			&--text
 				td,th
 					padding: 24px
 	.stat-block
+		padding-bottom: 50px
 		&__item
 			margin: 15px
 			&-title
-				font-size: 36px
+				font-size: 32px
+	.infographics
+		overflow: visible
+		&__box
+			margin: 0 -15px
+			&:not(:empty)
+				margin-bottom: -20px
+		&__item
+			margin: 20px 15px
+			width: calc(50% - 30px)
+	.article
+		padding: 45px 32px
+		margin: 0 0 60px
 	.schema
 		&__item
 			width: calc(100% - 30px)
 			padding: 40px
-			min-height: 290px
-	.stat-block
-		padding-bottom: 50px
+			min-height: 290px		
+	.direction-card
+		padding: 20px
+		width: 360px
+		font-size: 14px
+		&__pic
+			width: 120px
+			margin-right: 20px
+			img
+				height: 130px
+		&__title
+			font-size: 20px	
 	.news
 		&__box
 			margin: 0 -15px
+	.feedback
+		.fancybox-close-small
+			top: 44px
+		&__fieldset
+			margin: 0 0 40px
 	.footer
 		&__column
 			width: calc(100% / 3 - 30px)
 @media(max-width: 1199px)
+	body
+		font-size: 16px
+	.inner-page
+		padding-top: 70px
+		@supports(position: sticky)
+			padding-top: 0
+	h1,h2
+		font-size: 40px
+	h3
+		font-size: 22px
+	h4
+		font-size: 18px
 	[type=text],
 	[type=tel],
 	[type=email],
@@ -325,131 +424,443 @@
 	[type=password],
 	[type=search],
 	textarea
-		padding-top: 20px
-		padding-bottom: 20px
+		font-size: 14px
+		padding: 20px 20px
 	.date-input
 		padding-right: 50px
 		background-position: right 25px center
 	select
-		padding: 20px 50px 20px 20px
-		background-position: right 15px center
+		font-size: 14px
+		padding: 20px 30px 20px 20px
+		background-size: 12px auto
+		background-position: right 10px center
 	.select
-		padding: 20px 50px 20px 20px
+		font-size: 14px
+		padding: 20px 30px 20px 20px
 		&:after
-			right: 15px
+			right: 10px
+			font-size: 12px
 		&__list
 			>li
 				padding-left: 20px
 				padding-right: 20px
 	.radio-btn
 		&__btn
-			padding: 14px 30px
+			border-width: 1px
+			font-size: 14px
+			padding: 12px 20px
+	.info
+		width: 12px
+		height: 12px
+		border-width: 1px
+		line-height: 10px
+		font-size: 10px
+		vertical-align: .1em
+	.btn
+		font-size: 14px
+		line-height: 40px
+		border-width: 1px
+		&--small
+			font-size: 12px
+			line-height: 29px
+			padding: 0 22px
+		&--big
+			padding: 0 40px
+			line-height: 45px
+		&--image
+			padding: 11px 35px
+			line-height: 1
 	.wrapper
 		max-width: 992px
-	.search-form
-		&__select
-			margin-left: 20px
+	.search-widget
+		margin: 0 0 15px
+		&__input
+			padding-left: 50px
 			padding-right: 50px
-	.header
-		&__location
-			padding: 20px 20px 20px 0
-		&__phone
-			&--desktop
-				display: none
 		&__btn
-			margin-right: 0
+			left: 22px
+		&__clear-btn
+			right: 22px
+	.search-form
+		&__input
+			padding-right: 180px
+		&__clear-btn
+			right: 145px
+		&__btn
+			width: 120px
+		&__select
+			width: 150px
+			margin-left: 20px
+		&__date
+			width: 220px
+			margin-left: 20px
+	.header
+		&--fixed
+			transform: none
+		&--hidden
+			@supports(width: calc(var(--h-top-height))
+				transform: translateY(-100%)
+		&__topline
+			display: none
+		&__logo
+			img
+				height: 50px
+		&__btn
+			&--tablet
+				display: inline-block
+				margin: 0 0 0 15px
 		&__bottomline
 			padding: 10px 0
+			border-bottom: 0				
 		&__nav
 			display: none
+		&__tool
+			width: 60px
+			font-size: 16px
+			line-height: 40px
+			&.icon-eye
+				font-size: 21px
 		&__menu
+			height: calc(100vh - 70px)
+			height: calc(var(--w-height) - var(--h-bottom-height))
 			&-wrapper
 				flex-wrap: wrap
 			&-column
 				width: 50%
 				margin: 0 0 32px
+		&--fixed &__menu
+			height: calc(100vh - 70px)
+			height: calc(var(--w-height) - var(--h-bottom-height))
 		&__search
 			padding: 10px 0
+	.location
+		padding: 40px 20px 20px
+		&__close-btn
+			top: 0
+			right: 0
+			font-size: 20px
+			line-height: 2
+			width: 2em
+		&__search
+			margin: 0 0 21px
+		&__body
+			max-height: calc(100% - 80px)
+		&__list
+			font-size: 16px
+			columns: 4
 	.top-block
+		font-size: inherit
+		&__slide
+			padding: 100px 0 70px
 		&__text
 			padding: 0
+			max-width: 350px
+			margin: 0 0 35px
+		&__title
+			font-size: 42px
 		&__buttons
+			max-width: 500px
 			padding: 0
+		&__btn
+			margin: 14px 16px 0 0
 		&__nav
-			min-width: none
-			width: 100%
-			background-color: rgba(255,255,255,.95)
-			justify-content: flex-end
-	.section-title
-		strong
-			display: block
-	.stat
-		&__wrapper
-			display: block
+			display: none
+		&__dots
+			+unlist
+			padding-left: 2em
+			position: absolute
+			z-index: 2
+			top: calc(50% + 25px)
+			transform: translateY(-50%)
+			left: calc(50% + 291px)
+			width: 190px
+			counter-reset: top
+			line-height: 1.35
+			max-height: calc(100% - 150px)
+			overflow: auto
+			>li
+				position: relative
+				opacity: .7
+				margin: 0 0 1em
+				&:before
+					counter-increment: top
+					content: counter(top, decimal-leading-zero)
+					display: inline-block
+					position: absolute
+					left: -2em
+				&:last-child
+					margin-bottom: 0
+				&.slick-active
+					opacity: 1
+					font-weight: bold
+	.about-block
 		&__head
+			width: 300px
+	.stat-card
+		width: 323px
+		min-height: 155px
+		margin: 0 8px 16px
+		font-size: inherit
+		&--small
+			width: 270px
+		&__title
+			font-size: 20/12*1em
+	.stat
+		&__head
+			width: 300px
+			padding-right: 46px
+			padding-bottom: 16px
+		&__btn
 			display: block
-			width: auto
-			padding: 0
-			text-align: center
-			margin: 0 0 50px
-			&:last-child
-				margin-bottom: 0
-		&__body
-			width: auto
+			width: 100%
+			padding: 0 10px
 		&__box
-			justify-content: center
+			margin: 0 -8px			
 	.product-card
-		flex: 1 1 auto
+		width: 466px
+		min-height: 360px
+		&__text
+			font-size: 14px
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: calc(1em - 1px)
+	.services-block
+		padding: 60px 0 40px
 	.calc
 		padding: 50px 0
 		&__inner
 			padding: 40px
-		&__main
-			display: block
 		&__field
-			width: auto
+			width: calc(50% - 15px)
+			margin: 0 0 30px
+		&__label
+			font-size: 14px
 		&__radio-group
-			margin-top: 0
+			margin-top: 36px
+		&__subtitle
+			margin: 0 0 .6em
 		&__options
-			margin-bottom: 10px
+			margin: 0 0 22px
+		&__option
+			margin: 0 12px 15px 0
+	.post-card
+		display: flex
+		width: auto
+		margin: 0 0 30px
+		&:last-child
+			margin-bottom: 0
+		&__pic
+			width: 270px
+			flex: 0 0 auto
+			margin: 0 30px 0 0
+			background-size: auto 60px
+			height: auto
+			min-height: 120px
+			line-height: 120px
+			font-size: 40px
+		&__text
+			width: calc(100% - 300px)
+			flex: 1 1 auto
+		&__info
+			font-size: 14px
+			margin: 0 0 .5em
+		&__title
+			margin: 0 0 .5em
 	.news-section
 		&__title
 			margin: 0 0 .5em
 			&--single
-				font-size: 42px
-				text-align: center
+				font-size: 40px
+				margin: 0 0 1em
+		&__nav
+			font-size: 20px
+		&__body
+			margin: 0 0 36px
+			&:last-child
+				margin-bottom: 0
 		&__box
-			justify-content: center
+			display: block
+			margin: 0
 	.faq
 		&__item
 			width: 466px
 			padding: 25px
 			font-size: 18px
 		&__question
-			font-size: 20px
-	.category-card
-		flex: 1 1 auto
-		&__pic
-			img
-				height: auto
+			font-size: 20px	
+	.page-head
+		&--gray
+			padding-bottom: 40px
 	.sidebar-page
-		&__wrapper
-			display: block
 		&__main
+			width: calc(100% - 300px)
+		&__sidebar
+			width: 300px
+	.menu-widget
+		font-size: 16px
+		margin: 0 0 15px
+	.contact-widget
+		font-size: 16px
+		padding: 2em 1.5em
+		margin: 0 0 15px
+		&__title
+			font-size: 20/16*1em
+	.banner-widget
+		margin: 0 0 15px
+		&__text
+			padding: 2em 1em 1em
+		&__subtitle
+			font-size: 1em
+		&__title
+			font-size: 1.8em
+	.text-block
+		padding-bottom: 40px
+	.procurements
+		padding: 20px 0 30px
+		&__search
+			margin: 0 0 25px
+		&__filter
+			margin: 0 0 25px
+		&__table
+			td,th
+				padding: 1.25em 1em
+				&:first-child
+					padding-left: 1.3em
+				&:last-child
+					padding-right: 1.3em
+		&__footer
+			margin-top: 25px
+	.category-card
+		padding: 32px 64px 32px 32px
+		&__pic
+			width: 320px
+		&__text
+			padding: 0 0 0 32px
+			font-size: 14px
+			max-height: 290px
+			&--open
+				max-height: 100vw
+		&__dropdown
+			width: 40px
+			height: 40px
+			line-height: 40px
+			right: 15px
+			bottom: 15px
+	.card
+		margin: 0 7.5px 15px
+		width: 308px
+		&--small
+			width: 276px
+		&__subtitle
+			font-size: 14px
+		&__title
+			font-size: 20px
+		&__img
+			&--small
+				width: 50px
+	.category
+		&__box
+			margin: 0 -7.5px
+	.catalog-block
+		&__box
+			margin: 0 -7.5px
+			&:not(:empty)
+				margin-bottom: -15px
+	.gray-text
+		margin: 0 0 3em
+	.info-block
+		padding-bottom: 65px
+		&__text
+			font-size: inherit
+			table
+				font-size: 14px
+			td,th
+				padding: 1.25em 1em
+	.accordion
+		font-size: inherit
+		&__item
+			padding: 1.3em 1.7em
+		&__text
+			padding-top: .8em
+	.direction-card
+		width: 300px
+		font-size: 14px
+		padding: 15px
+		flex: 1 1 auto
+		margin: 0 8px 16px
+		&__pic
+			width: 100px
+			margin-right: 15px
+		&__title
+			font-size: 1.4em
+	.calc-block
+		&__field
+			font-size: 12px
+	.infographics
+		&__item
+			font-size: inherit
+			&-pic
+				width: 6em
+				height: 6em
+	.schema
+		&__title
+			font-size: 2em
+		&__box
+			display: block
+			margin: 0
+		&__item
 			width: auto
-			padding: 0 0 50px
+			padding: 40px 32px
+			font-size: inherit
+			margin: 0 0 20px
 			&:last-child
 				margin-bottom: 0
-		&__sidebar
-			width: auto
+			&-title
+				font-size: 1.5em
+			&-img
+				max-width: 50%
+	.category-block
+		&__title
+			font-size: 2em
+	.about
+		&__stat
+			margin: 0 -8px 30px
+		&__directions
+			margin: 0 -8px 30px
 	.contacts
 		&__map
 			margin-bottom: 30px
 	.news
 		&__nav
 			font-size: inherit
+			margin: 0 0 24px
+		&__search
+			margin: 0 0 40px
 		&__box
-			justify-content: center
+			display: block
+			margin: 0 0 40px
+			&:last-child
+				margin-bottom: 0
+	.person-card
+		font-size: 14px
+		margin: 0 15px 30px
+		width: 300px
+		&__pic
+			margin: 0 0 1em
+	.management
+		&__box
+			margin: 0 -15px
+	.feedback
+		width: 760px
+		padding: 36px
+		.fancybox-close-small
+			top: 36px
+			right: 36px
+		&__fieldset
+			margin: 0 0 30px
+	.page-404
+		padding: 65px 0
 	.cookies
 		transform: none
 		left: 0
@@ -457,28 +868,124 @@
 		width: 100%
 		max-width: 100%
 		border-radius: 0
+	.footer
+		font-size: 16px
+		
 @media(max-width:991px)
 	body
-		font-size: 16px
+		font-size: 12px
+	.wrapper
+		max-width: 720px	
 	h1,h2
-		font-size: 42px
+		font-size: 30px
 	h3
-		font-size: 24px
+		font-size: 18px
+	h4
+		font-size: 16px
 	ul
-		list-style-image: url(../img/list-marker-18.svg)
+		list-style-image: url(../img/list-marker-12.svg)
 		padding-left: 1em
+	td,th
+		padding: 1.25em 1em
+		&:first-child
+			padding-left: 1.3em
+		&:last-child
+			padding-right: 1.3em
+	[type=text],
+	[type=tel],
+	[type=email],
+	[type=url],
+	[type=password],
+	[type=search],
+	textarea
+		font-size: 12px
+		padding: 21.5px 20px
+		margin: 0 0 10px
+	select
+		font-size: 12px
+		padding: 21.5px 30px 21.5px 20px
+		margin: 0 0 10px
 	.select
+		font-size: 12px
+		padding: 21.5px 30px 21.5px 20px
+		margin: 0 0 10px
 		&__input
 			z-index: 2
 			pointer-events: auto
 		&__output
 			z-index: 0
+	.radio-btn
+		&__btn
+			font-size: 12px
+			padding: 8px 25px
+			border-radius: 5px
+	.date-input
+		background-position: right 20px center
+		background-size: 15px auto
+		padding-right: 40px
+	.btn
+		font-size: 12px
+		padding: 0 32px
+		&--big
+			line-height: 40px
+		&--block
+			padding: 0 10px
+		&--medium
+			line-height: 29px
+		&--image
+			padding: 9px 28px
+			img
+				height: 22px
 	.file-link
-		padding-right: 50px
+		font-size: 12px
+		padding: 15px 20px 15px 50px
+		background-size: 20px auto
+		background-position-x: 15px
 	.search-form
+		&__input
+			padding-right: 220px
+			margin: 0
+			&--low
+				padding-top: 17px
+				padding-bottom: 17px
+		&__btn
+			padding: 0 10px
+			width: 161px
+			right: 18px
 		&__close-btn
 			display: none
+		&__clear-btn
+			font-size: 12px
+			right: 192px
+		&__date
+			margin: 0 0 0 15px
+	.search-widget
+		&__input
+			padding: 15px 35px
+			margin: 0
+		&__btn
+			left: 10px
+		&__clear-btn
+			font-size: 12px
+			right: 15px
+	.menu-btn
+		width: 29px
+		height: 29px
+		margin-right: 31px
+		&:before
+			height: 20px
+		&--active:before
+			height: 2px
 	.header
+		&__logo
+			img
+				height: 33px	
+		&__tool
+			width: 48px
+			font-size: 14px
+			line-height: 30px
+			&.icon-eye
+				font-size: 19px
 		&__menu
 			padding: 20px 0 30px
 			&-wrapper
@@ -522,88 +1029,159 @@
 							padding: .5em 0
 		&__feedback
 			text-align: center
+	.location
+		&__list
+			font-size: inherit
+			columns: 3
 	.top-block
+		overflow: hidden
 		&__slide
-			padding: 200px 0 100px
+			&--bg-right
+				background-position: 75% 50%
+		&__title
+			font-size: 36px
+			word-break: break-word
+		&__dots
+			width: 140px
+			padding-left: 1.6em
+			left: calc(50% + 173px)
+			>li
+				&:before
+					left: -1.6em
+	.about-block
+		padding: 64px 0 30px
+		&:last-child
+			padding-bottom: 66px
+		&__head
+			width: 240px
 		&__text
-			max-width: none
-			text-align: center
+			padding-right: 1em
 			p
-				margin: 0 0 1em
+				margin: 0 0 1.3em
 				&:last-child
 					margin-bottom: 0
-		&__title
-			font-size: 50px
-			word-break: break-word
-		&__buttons
-			width: 320px
-			max-width: 100%
-			margin: 0 auto
-		&__btn
-			display: block
-			width: 100%
-			padding: 0 10px
-			margin: 0 0 10px
-			&:last-child
-				margin-bottom: 0
-		&__nav
-			background: none
-			color: inherit
-			justify-content: center
-			bottom: 20px
-			>li
-				padding: 0
-				width: 10px
-				height: 10px
-				border: 2px solid
-				border-radius: 50%
-				margin: 5px
-				&:before
-					display: none
-				&.slick-active
-					color: inherit
-					background-color: currentColor
-	.about
-		padding: 50px 0
-		&__wrapper
-			display: block
-		&__head
-			width: auto
-			padding: 0
-			margin: 0 0 30px
-			&:last-child
-				margin-bottom: 0
-		&__text
-			width: auto
 		&__banner
-			width: auto
-			margin: 20px -15px 0
+			margin-top: 33px
 	.stat-card
-		flex: 1 1 auto
-		min-height: 0
+		width: 217px
+		min-height: 135px
+		padding: 24px
+		line-height: 1.51
+		&__title
+			line-height: 1.35
+		&--small
+			width: 200px
 	.stat
-		padding: 50px 0
-	.services-block
-		padding: 50px 0
-	.news-section
-		&__nav
+		padding: 34px 0 47px
+		&__head
+			width: 240px
+			padding-right: 40px
+	.circle-link
+		width: 32px
+		height: 32px
+		line-height: 32px
+		font-size: 10px
+	.product-card
+		width: 330px
+		padding: 32px
+		min-height: 295px
+		flex-direction: row
+		align-items: flex-start
+		&__text
+			font-size: inherit
+			line-height: 1.51
+			width: 160px
+			margin: 0 16px 0 0
+		&__subtitle
+			line-height: 1.35
+		&__title
 			font-size: 18px
-			white-space: nowrap
-			flex-wrap: nowrap
-			max-width: 100%
-			overflow: auto
-			border-bottom: none
-			background: linear-gradient(#C7C7C7,#C7C7C7) no-repeat left bottom/auto 2px
-			>li
-				padding: 13px
-				transform: none
-	.faq
+			margin: 0 0 .4em
+		&__link
+			margin: auto auto 9px
+		&__img
+			bottom: auto
+			top: 29px
+			right: 16px
+			height: 172px
+			width: 110px
+			object-fit: cover
+			object-position: 73% 0
+	.services-block
+		padding: 40px 0 10px
+		&__nav
+			margin: 0 -6px 20px
+		&__trigger
+			margin: 0 6px 12px
+	.calc
+		padding: 65px 0 0
+		&__inner
+			padding: 36px
+			margin: 0 0 31px
+		&__field
+			margin: 0 0 37px
+		&__label
+			font-size: 11px
+			margin: 0 0 1.1em
+		&__radio-group
+			margin-top: 28px
+		&__subtitle
+			font-size: 20px
+			margin: 0 0 .8em
+	.post-card
+		font-size: inherit
+		line-height: 1.51
+		&__pic
+			width: 210px
+			min-height: 113px
+			line-height: 113px
+		&__info
+			font-size: 11px
+			margin: 0 0 .7em
+		&__title
+			font-size: 18px
+			line-height: 1.35
+			margin: 0 0 .4em
+	.news-section
+		padding: 35px 0 25px
 		&:last-child
-			padding-bottom: 75px
+			padding-bottom: 60px
+		&__title
+			margin: 0 0 .9em
+			&--single
+				font-size: 28px
+		&__nav
+			font-size: 14px			
+			max-width: 100%
+			background-size: auto 1px
+			margin: 0 0 30px
+			>li
+				padding: 0.6em 1.7em
+				border-width: 1px
+	.faq
+		padding: 40px 0
+		&:last-child
+			padding-bottom: 62px
+		&__title
+			margin:  0 0 67px
+		&__search
+			margin: 0 0 37px
 		&__item
-			flex: 1 1 auto
+			width: 330px
+			padding: 16px 30px 20px
+			font-size: inherit
+			line-height: 1.51
+		&__question
+			font-size: 18px
+			line-height: 1.35
+			margin: 0 0 .4em
+		&__footer
+			display: block
+			text-align: center
+			padding-top: 9px
 	.breadcrumbs
-		padding: 35px 0 20px
+		padding: 30px 0
+		font-size: inherit
 	.page-head
 		&__title
 			&:only-child
@@ -611,54 +1189,104 @@
 		&__subtitle
 			font-size: 18px
 	.category-card
-		padding: 0
-		overflow: hidden
-		font-size: 16px
-		align-items: stretch
-		margin: 0 15px 15px
+		padding: 20px 64px 20px 20px
+		margin: 0 0 20px
 		&__pic
-			img
-				height: 100%
+			width: 290px
 		&__text
-			padding: 20px
-		&__title
-			font-size: 20px
-		&__link
-			display: none
-		&__footer
-			padding: 0
-			min-height: 0
-	.info-block
-		padding-bottom: 50px
-		&__title
-			font-size: 42px
+			font-size: inherit
+			padding-left: 20px
+			max-height: 262px
+			&--open
+				max-height: 200vw
+			ul
+				list-style-image: url(../img/list-marker-12.svg)
+	.card
+		width: 200px
+		padding: 15px
 		&__subtitle
-			font-size: 30px
-			margin: 0 0 .4em
+			font-size: 11px
+		&__title
+			font-size: 14px
+		&__img
+			width: 36px
+	.category
+		padding: 0 0 40px
+	.gray-text
+		padding: 30px 30px 30px 0
+	.info-block
+		padding: 20px 0 50px
 		&__tab
-			padding: 40px 30px 50px
-			font-size: inherit
-			&--text
-				h3
-					font-size: 24px
-				table
-					font-size: 14px
-					table-layout: fixed
-				td,th
-					padding: 20px
-		&__card
-			font-size: inherit
-			&-icon
-				margin: 0 0 15px
+			padding: 20px
+			overflow: hidden
+		&__text
+			ul
+				list-style-image: url(../img/list-marker-12.svg)
+			table
+				font-size: inherit
+	.sidebar-page
+		&__main
+			width: calc(100% - 250px)
+			padding-right: 20px
+		&__sidebar
+			width: 250px
 	.menu-widget
-		font-size: 18px
+		font-size: 14px
+	.contact-widget
+		font-size: 14px
 	.category-block
 		&__title
-			font-size: 42px
 			margin: 0 0 1em
+	.text-block
+		padding-bottom: 30px
 	.article
-		padding: 40px 30px 50px
-		margin: 0 0 50px
+		padding: 30px 20px
+		margin: 0 0 30px
+	.stat-block
+		padding-bottom: 30px
+		&__item
+			&-title
+				font-size: 1.5em
+	.calc-block
+		&__main
+			display: block
+		&__field
+			width: 100%
+		&__options
+			margin: 0 0 15px
+		&__option
+			margin: 0 8px 10px 0
+	.infographics
+		&__box
+			margin: 0 -10px
+			&:not(:empty)
+				margin-bottom: -10px
+		&__item
+			width: calc(50% - 20px)
+			margin: 10px
+			&-text
+				ul
+					list-style-image: url(../img/list-marker-12.svg)
+	.schema
+		&__item
+			width: auto
+			font-size: inherit
+			min-height: 0
+			padding: 30px 20px
+			margin: 0 0 15px
+			&-title
+				font-size: 1.5em
+			&-img
+				display: block
+				position: static
+				max-height: 120px
+				max-width: 100%
+				margin: 0 -20px -30px auto
+	.direction-card
+		font-size: inherit
+		&__pic
+			img
+				height: 90px
 	.pagination
 		font-size: 18px
 		line-height: 43px
@@ -672,41 +1300,97 @@
 			width: 2em
 	.post
 		padding-bottom: 50px
-		&:last-child
-			padding-bottom: 90px
 	.feedback
-		&--modal
-			width: 780px
-			padding: 30px
-			&:last-child
-				padding-bottom: 30px
+		width: 580px
+		overflow: auto
 		.fancybox-close-small
 			top: 20px
 			right: 15px
-	.footer
-		padding: 30px 0
+		&__btn
+			margin: 0 0 20px
+	.person-card
+		width: 200px
+		font-size: 12px
+		margin: 0 7.5px 20px
+	.management
 		&__box
-			display: block
+			margin: 0 -7.5px
+	.search
+		padding: 10px 0 60px
+	.soc-link
+		width: 45px
+		height: 45px
+		line-height: 41px
+		font-size: 24px
+		margin: 12px
+	.footer
+		padding: 65px 0 20px
+		&__box
+			justify-content: space-between
 			margin: 0
 		&__column
-			width: auto
+			width: calc(50% - 30px)
 			margin: 0
-		&__menu
-			display: none
-		&__logo,
-		&__phone,
-		&__address,
-		&__social,
-		&__nav
-			margin-bottom: 20px
+			&--main
+				width: 100%
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				margin: 0 0 67px
+				&:last-child
+					margin-bottom: 0
+		&__mobile-column
+			width: calc(50% - 30px)
+			margin: 0
+		&__logo
+			width: 194px
+			margin: 0 0 24px
+		&__phone
+			margin: 0 0 31px
+			&-number
+				font-size: 18px
+				margin: 0 0 .3em
+				&:last-child
+					margin-bottom: 0
+		&__address
+			margin: 0 0 18px
+		&__social
+			margin: 0 -12px 19px
 		&__text
-			padding: 0
+			padding-right: 4px
+			line-height: 1.35
+		&__buttons
+			margin: 10px -8px 15px
+		&__btn
+			margin: 0 8px 16px
+		&__nav
+			margin: 0 0 2em
+		&__menu
+			font-size: inherit
+			line-height: 1.35
+			>li
+				margin: 0 0 1.3em
+				>a
+					font-size: inherit
+			ul
+				margin: 1.3em 0 2.3em
+				>li
+					margin: 0 0 1.35em
 
 @media(max-width:767px)
-	h1,h2
-		font-size: 36px
+	.wrapper
+		max-width: none
+	body
+		font-size: 16px
+	h3
+		font-size: 20px
+	h4
+		font-size: 18px
+	ul
+		list-style-image: url(../img/list-marker-18.svg)
 	table
 		line-height: normal
+		font-size: 14px
 	td,th
 		height: auto
 		padding: 15px 10px
@@ -721,83 +1405,61 @@
 	[type=password],
 	[type=search],
 	textarea
-		font-size: 18px
-		padding: 18px
+		font-size: 14px
+		padding: 15px 18px
 	select
-		font-size: 18px
-		padding: 18px 40px 18px 18px
+		font-size: 14px
+		padding: 15px 30px 15px 18px
 	.select
-		font-size: 18px
-		padding: 18px 40px 18px 18px
+		font-size: 14px
+		padding: 15px 30px 15px 18px
 		&__list
 			>li
 				padding-left: 18px
 				padding-right: 18px
-	.btn
-		font-size: 18px
-		padding: 0 30px
-		&--small,
-		&--medium
-			font-size: 14px
-		&--big
-			line-height: 57px
-		&--image
-			padding: 11px 35px
-		&--block
-			padding: 0 10px	
 	.radio-btn
 		&__btn
-			font-size: 20px
-			padding: 14px 20px
-	.irs
-		&--round
-			&.irs-with-grid
-				height: 54px
-		&--round &-bar
-			top: 16px
-			height: 6px
-		&--round &-line
-			top: 16px
-			height: 6px
-		&--round &-grid-text
 			font-size: 16px
-	.range-field
-		padding: 0 0 32px		
-		&__output
-			font-size: 18px
-			padding: 24px 18px
-	.radio-group
-		background-size: auto 6px
-		max-width: 100%
-		overflow: auto
-		&__item
-			padding: 0 5px
-			flex: 1 0 auto
-		&__value
-			font-size: 20px
-			margin: 0 0 1.2em
-			&:before
-				height: 6px
-				top: calc(50% - 3px)
-		&__legend
-			font-size: 18px
+			padding: 13.5px 32px
+			border-radius: 10px
+	.btn
+		font-size: 16px
+		line-height: 46px
+		&--small,
+		&--medium
+			font-size: 12px
+			line-height: 28px
+		&--big
+			line-height: 43px
+			font-size: 14px
+		&--image
+			line-height: 1
+			padding: 9px 28px
+		&--block
+			padding: 0 10px	
 	.file-link
 		font-size: inherit
 		padding: 1em 1em 1em 60px
 		background-position-x: 15px
+		background-size: 29px auto
 	.search-form
 		flex-wrap: wrap
 		&__inner
 			width: calc(100% - 50px)
 			flex: 1 1 auto
 		&__btn
-			padding: 0 10px
-			width: 120px
-			right: 6px
+			padding: 0
+			right: 15px
+			width: 64px
+			i
+				margin: 0
+			span
+				display: none
 		&__input
-			padding-right: 135px
+			padding-right: 60px
 		&__clear-btn
-			display: none
+			font-size: 11px
+			right: 94px
 		&__close-btn
 			width: 2em
 		&__select
@@ -806,62 +1468,438 @@
 			order: -1
 			&:last-child
 				margin-bottom: 10px
+		&__date
+			margin: 10px 0 0
+			width: 100%
+	.search-widget
+		display: none
+	.menu-btn
+		width: 22px
+		height: 22px
+		margin-right: 16px
+		&:before
+			height: 18px
+		&--active:before
+			height: 2px
+	#accessibility-mode-btn
+		display: none
+	.header
+		font-size: 12px
+		&--abs
+			border-bottom: 1px solid rgba(255,255,255,.5)
+		&--fixed,
+		&--open
+			border-bottom: none
+		&__logo
+			img
+				height: 35px
+		&__btn
+			display: none
+		&__tool
+			width: 2em
+			text-align: center
+			line-height: 2em
+			font-size: 13px
+		&__auth-link
+			display: inline-block
+			color: inherit
+			margin-left: 2.2em
+			i
+				margin-right: .3em
+	.location
+		padding: 50px 15px 20px
+		&__body
+			max-height: calc(100% - 70px)
+		&__list
+			font-size: 14px
+			columns: 2
 	.top-block
-		&__title
-			font-size: 42px
-	.stat-card
-		font-size: 18px
-		&__title
-			font-size: 32px
-	.product-card
+		font-size: 14px
+		&__slide
+			padding: 80px 0 110px
 		&__text
-			z-index: 0
-	.services-block
-		&__trigger
-			flex: 1 1 auto
-		&__nav
-			margin-bottom: 20px
-	.calc
-		&__inner
-			padding: 30px 20px
-		&__option
-			margin: 0 10px 10px 0
-	.breadcrumbs
-		font-size: inherit
-	.info-block
+			margin: 0 0 28px
+		&__dots
+			padding: 0
+			bottom: 45px
+			top: auto
+			transform: none
+			left: 0
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			align-items: baseline
+			font-size: 20px
+			overflow: visible
+			max-height: none
+			>li
+				padding: 15px
+				margin: 0 6px 0 0
+				&:before
+					position: static
+	.section-title
+		strong
+			display: block
+	.about-block
+		&__wrapper
+			display: block
+		&__head
+			width: auto
+			padding: 0
+			margin: 0 0 25px
+			&:last-child
+				margin-bottom: 0
+		&__text
+			width: auto
+			padding: 0
+			p
+				margin: 0 0 1em
+		&__banner
+			margin-top: 25px
+	.stat-card
+		flex: 0 0 auto
+		width: 243px
+		margin: 8px 16px 16px 0
 		&__title
-			font-size: 36px
+			font-size: 22px
+			margin: 0 0 .5em
+	.stat
+		padding-bottom: 64px
+		&__wrapper
+			display: block
+		&__head
+			width: auto
+			padding: 0
+		&__btn
+			display: none
+		&__body
+			width: auto
+		&__box
+			margin: 0 -15px
+			flex-wrap: nowrap
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 15px
+			&:after
+				content: ''
+				display: block
+				width: 1px
+				flex: 0 0 auto
+		&__footer
+			display: block
+			text-align: center
+			padding-top: 20px
+	.circle-link
+		width: 45px
+		height: 45px
+		line-height: 45px
+		font-size: 14px
+	.product-card
+		width: 243px
+		padding: 36px
+		flex: 0 0 auto
+		flex-direction: column
+		margin: 8px 12px 16px
+		min-height: 287px
+		&.slick-slide
+			margin: 8px 12px 16px
+		&__text
+			width: 100%
+			p,ul
+				display: none
+		&__subtitle
+			font-size: 12px
+			line-height: 1.51
+		&__title
+			font-size: 20px
+		&__link
+			margin: auto 0 0 auto
+		&__img
+			right: auto
+			top: auto
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 170px
+	.services-block
+		padding-bottom: 20px
+		&__title
+			text-align: inherit
+			margin: 0 0 .7em
+		&__trigger
+			width: calc(50% - 16px)
+			margin: 0 8px 16px
+			padding: 0 10px
+		&__nav
+			margin: 0 -8px 13px
+		&__box
+			flex-wrap: nowrap
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 3px
+			&:after
+				content: ''
+				display: block
+				width: 3px
+				flex: 0 0 auto
+	.calc
+		&__title
+			text-align: inherit
+		&__inner
+			padding: 32px 28px 45px
+			margin: 0 0 6px
+		&__main
+			display: block
+		&__field
+			width: auto
+			margin: 0 0 40px
+		&__label
+			font-size: 12px
+			line-height: 1.35
+			margin: 0 0 .95em
+		&__radio-group
+			margin-top: 18px
+		&__options
+			text-align: center
+		&__subtitle
+			margin: 0 0 1.1em
+		&__option
+			display: block
+			width: max-content
+			max-width: 100%
+			margin: 0 auto 12px
+			&:last-child
+				margin-bottom: 0
+		&__btn
+			display: block
+			width: max-content
+			margin: 0 auto
+		&__result
+			flex-wrap: nowrap
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 3px
+			&:after
+				content: ''
+				display: block
+				width: 3px
+				flex: 0 0 auto
+	.post-card
+		display: block
+		width: 255px
+		margin: 0 15px
+		flex: 0 0 auto
+		&__pic
+			width: auto
+			min-height: 144px
+			line-height: 144px
+			font-size: 50px
+			margin: 0 0 24px
+		&__text
+			width: auto
+			p,ul
+				display: none
+		&__info
+			font-size: 12px
+			margin: 0 0 .3em		
+	.news-section
+		padding: 48px 0 20px
+		&__title
+			text-align: inherit
+		&__nav
+			background-size: auto 2px
+			margin: 0 0 35px
+			>li
+				border-width: 2px
+		&__body
+			overflow: visible
+			margin: 0
+		&__box
+			display: flex
+			flex-wrap: nowrap
+			margin: 0 -15px
+			max-width: calc(100% + 30px)
+			overflow: auto
+			&:after
+				content: ''
+				display: block
+				width: 1px
+				flex: 0 0 auto
+		&__footer
+			display: none
+	.faq
+		padding: 35px 0
+		&:last-child
+			padding-bottom: 71px
+		&__title
+			text-align: inherit
+			margin: 0 0 .85em
+		&__box
+			display: block
+			margin: 0
+		&__item
+			width: auto
+			padding: 24px
+			font-size: 14px
+			margin: 0 0 16px
+			&:nth-child(n+5)
+				display: none
+		&__footer
+			padding-top: 22px
+	.category-card
+		display: block
+		max-width: 350px
+		padding: 20px
+		margin: 0 auto 20px
+		&__pic
+			width: auto
+			margin: 0 0 20px
+		&__text
+			padding: 0
+			max-height: 200px
+			&--open
+				max-height: 300vh
+		&__dropdown
+			display: block
+			position: static
+			margin: 10px auto 0
+	.sidebar-page
+		padding: 0 0 20px
+		&:last-child
+			padding-bottom: 60px
+		&__wrapper
+			display: block
+		&__main
+			width: auto
+			padding: 0
+			margin: 0 0 40px
+			&:last-child
+				margin-bottom: 0
+		&__sidebar
+			width: auto
+	.menu-widget
+		font-size: inherit
+	.contact-widget
+		font-size: inherit
+	.card
+		width: 260px
+		padding: 20px
+		&__subtitle
+			font-size: 12px
+		&__title
+			font-size: 20px
+		&__img
+			width: 50px
+	.info-block
+		&__tabs
+			margin: 0 -15px
 		&__tab
-			&--text	
-				.table-wrapper
-					margin-left: -15px
-					margin-right: -15px
-					max-width: calc(100% + 30px)
+			padding: 30px 15px
+		&__text	
+			.table-wrapper
+				margin-left: -15px
+				margin-right: -15px
+				max-width: calc(100% + 30px)
+	.gray-text
+		padding: 35px 15px
+		margin: 0 -15px 3em
+		&:before
+			display: none
+	.accordion
+		&__text
+			padding-right: 0
+		&__btn
+			margin-top: 0
 	.stat-block
 		&__item
 			width: calc(100% - 30px)
 			flex: 1 1 auto
 	.category-block
-		&__title
-			font-size: 36px
-	.news-section
-		&__title
-			&--single
-				font-size: 36px
-	.schema
-		&__title
-			font-size: 36px
+		&__slider
+			&:not(.slick-initialized)
+				flex-wrap: nowrap
+				max-width: calc(100% + 30px)
+				overflow: auto
+				padding-left: 3px
+				&:after
+					content: ""
+					display: block
+					width: 3px
+					flex: 0 0 auto
+			.slick-list
+				padding-left: 15px
+	.calc-block
+		&__main
+			max-width: 380px
+		&__btn
+			font-size: 16px
+			line-height: 46px
+			border-radius: 10px
+	.infographics
+		&__box
+			display: block
+			margin: 0
+			&:not(:empty)
+				margin: 0
 		&__item
+			width: auto
+			margin: 0 0 30px
+			&:last-child
+				margin-bottom: 0
+			&-pic
+				margin: 0 0 1em
+	.article
+		padding: 15px 0
+		border-radius: 0
+		box-shadow: none
+		margin: 0 0 30px
+	.schema
+		&__item
+			padding: 30px 20px
+			&-title
+				font-size: 24px
 			&-img
 				display: block
 				position: static
 				max-height: 180px
 				max-width: 100%
-				margin: 0 -40px -40px auto
+				margin: 0 -20px -30px auto
+	.direction-card
+		width: calc(100% - 16px)
+		font-size: 14px
+		align-items: stretch
+		&__pic
+			width: 150px
+			img
+				height: auto
+				min-height: 100%
+	.about
+		&__stat
+			margin: 0 -15px 35px
+			flex-wrap: nowrap
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 15px
+			&:after
+				content: ''
+				display: block
+				width: 1px
+				flex: 0 0 auto
 	.news
 		padding-bottom: 90px
-		&__search
-			margin-bottom: 40px
+		&__box
+			display: flex
+			flex-wrap: nowrap
+			margin: 0 -15px 30px
+			max-width: calc(100% + 30px)
+			overflow: auto
+			&:after
+				content: ''
+				display: block
+				width: 1px
+				flex: 0 0 auto
+			&:last-child
+				margin-bottom: 0
 	.post
 		&__title
 			font-size: 32px
@@ -887,90 +1925,92 @@
 		&__footer
 			margin-top: 30px
 	.feedback
+		padding: 30px 15px
+		.fancybox-close-small
+			width: 44px
+			height: 44px
+			padding: 10px
+			top: 0
+			right: 0
+		&__title
+			font-size: 1.5em
+			margin: 0 0 .75em
+			padding: 0
 		&__nav
 			margin: 0 0 30px
 			>li
-				padding: 0.6em
-		&__fieldset
-			margin: 0 0 40px
+				padding: 0.6em		
+	.person-card
+		flex: 0 0 auto
+	.management
+		overflow: visible
+		&__box
+			flex-wrap: nowrap
+			margin: 0 -15px
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 7.5px
+			&:after
+				content: ''
+				display: block
+				width: 7.5px
+				flex: 0 0 auto
+	.search
+		&__nav
+			font-size: inherit
+			>li
+				>a
+					padding: .5em .75em
+		&__result
+			margin-bottom: 2em
+			&-title
+				margin: 0 0 .5em
+	.footer
+		padding: 36px 0 10px
+		&__box
+			display: block
+		&__column
+			width: auto
+			max-width: 302px
+			display: block
+			margin: 0 0 36px
+			&:last-child
+				margin-bottom: 0				
+		&__mobile-column
+			width: auto
+			margin: 0 0 30px
+		&__text
+			line-height: 1.4
+		&__btn
+			width: 142px
 
 @media(max-width:479px)
 	.file-link
 		padding: 1em
-		background-size: 0 0 
-	.header
-		&__logo
-			display: none
-			img
-				height: 50px
-			&--mobile
-				display: inline-block
-		&__btn
-			padding: 0 10px
-		&__tool
-			line-height: 50px
-			width: 2em
-	.search-form
-		&__btn
-			padding: 0
-			width: 47px
-			i
-				margin: 0
-			span
-				display: none
-		&__input
-			padding-right: 60px
-	.about
-		padding-bottom: 0
-		&__banner
-			min-height: 250px
-	.stat-card
-		margin-bottom: 15px
-	.product-card
-		padding: 40px 20px
-	.services-block
-		&__trigger
-			width: calc(100% - 24px)
-			margin-bottom: 12px
+		background-size: 0 0
 	.calc
-		&__inner
-			padding: 0
-			box-shadow: none
-		&__option
-			display: block
-			width: 100%
-			margin: 0 0 10px
 		&__btn
-			display: block
 			width: 100%
 			padding: 0 10px
-			margin: 20px 0 0
-	.faq
-		&__search
-			margin-bottom: 30px
-		&__item
-			margin-bottom: 15px
-	.category
+	.news-section
+		&__nav
+			text-align: center
+			background: none
+			>li
+				border-color: #C7C7C7
+				flex: 1 1 auto
+	.docs
+		&__nav
+			text-align: center
+			background: none
+			>li
+				flex: 1 1 auto
+				>a
+					border-color: #C7C7C7				
+	.catalog
 		padding: 0 0 50px
 		&__box
 			justify-content: center		
-	.category-card
-		display: block
-		width: 320px
-		flex: 0 1 auto
-		margin-bottom: 30px
-		&__pic
-			width: auto
-			img
-				height: 290px
-		&__text
-			width: auto
-			padding-bottom: 35px
-	.info-block
-		&__body
-			margin: 0 -15px
-		&__tab
-			padding: 30px 15px 50px
 	.menu-widget
 		font-size: inherit
 		padding: 20px 0
@@ -979,24 +2019,7 @@
 				padding: 5px 15px
 	.contact-widget
 		padding: 20px 15px
-		font-size: inherit
-	.article
-		padding: 15px 0
-		border-radius: 0
-		box-shadow: none
-		margin: 0 0 30px
-	.stat-block
-		&__item
-			margin: 0 15px 15px
-			&-title
-				font-size: 24px
-	.schema
-		&__item
-			padding: 30px 15px
-			&-title
-				font-size: 24px
-			&-img
-				margin: 0 -15px -30px auto
+		font-size: inherit		
 	.contacts
 		&__btn
 			padding: 0 10px
@@ -1004,8 +2027,12 @@
 			width: 100%
 	.news
 		&__nav
-			>li
+			background: none
+			text-align: center
+			>li				
+				flex: 1 1 auto
 				>a
+					border-color: #C7C7C7
 					padding: .75em
 		&__pagination
 			margin-top: 0
@@ -1017,27 +2044,20 @@
 			display: block
 			width: 100%
 			padding: 0 10px
+	.search
+		&__nav
+			text-align: center
+			background: none
+			>li
+				border-color: #C7C7C7
+				flex: 1 1 auto
 	.feedback
-		&--modal
-			padding: 30px 15px
-		&__modal-title
-			font-size: 26px
-			padding: 0
-			margin: 0 0 .8em
-		.fancybox-close-small
-			width: 44px
-			height: 44px
-			padding: 10px
-			top: 0
-			right: 0
-		&__btn
-			display: block
-			width: 100%
-			padding: 0 10px
-	.footer
-		&__btn
-			display: block
-			width: 100%
+		&__nav
+			text-align: center
+			background: none
+			>li
+				border-color: #C7C7C7
+				flex: 1 1 auto
 	.cookies
 		&__wrapper
 			flex-wrap: wrap

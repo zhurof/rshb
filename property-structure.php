@@ -16,7 +16,10 @@
 						<h1 class="page-head__title">Структура собственности</h1>
 					</div>
 					<div class="text-block text-block--small-gap">
-						<a href="document.pdf" class="file-link" target="_blank">Список участников и схема взаимосвязей участников ООО «РСХБ-Страхование жизни» по&nbsp;состоянию на 19.02.2019 года </a>
+						<a href="document.pdf" class="file-link" target="_blank">
+							<span class="file-link__title">Список участников и схема взаимосвязей участников ООО «РСХБ-Страхование жизни» по&nbsp;состоянию на 19.02.2019 года</span>
+							<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+						</a>
 					</div>
 				</div>
 				<? include "aside.php"; ?>

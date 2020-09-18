@@ -16,8 +16,14 @@
 					</div>
 					<div class="text-block">
 						<p>Информация о закупках ООО «РСХБ-Страхование жизни» размещена в сети Интернет на Официальном сайте Российской Федерации для размещения информации о закупках отдельными видами юридических лиц <a href="http://www.zakupki.gov.ru" target="_blank">http://www.zakupki.gov.ru</a>.</p>
-						<a href="document.pdf" class="file-link" target="_blank">Правила страхования жизни №2-НСЖ (действуют с 23.03.2020)</a>
-						<a href="document.pdf" class="file-link" target="_blank">Перечень товаров, работ, услуг, закупка которых осуществляется ООО «РСХБ-Страхование жизни» у субъектов малого и среднего предпринимательства</a>
+						<a href="document.pdf" class="file-link" target="_blank">
+							<span class="file-link__title">Правила страхования жизни №2-НСЖ (действуют с 23.03.2020)</span>
+							<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+						</a>
+						<a href="document.pdf" class="file-link" target="_blank">
+							<span class="file-link__title">Перечень товаров, работ, услуг, закупка которых осуществляется ООО «РСХБ-Страхование жизни» у субъектов малого и среднего предпринимательства</span>
+							<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+						</a>
 					</div>
 					<div class="procurements">
 						<form action="" class="search-form procurements__search">
@@ -30,7 +36,7 @@
 						<div class="procurements__filter">
 							<label class="procurements__field">
 								<span class="procurements__label">Дата</span>
-								<input type="text" class="date-input procurements__input" value="01.01.2020 - 24.08.2020">
+								<input type="text" class="date-input procurements__input" data-range="true" value="01.01.2020 - 24.08.2020">
 							</label>
 							<div class="procurements__field">
 								<span class="procurements__label">Категория</span>
@@ -54,8 +60,8 @@
 								<table class="procurements__table">
 									<thead>
 										<tr>
-											<th width="180">Номер закупки</th>
-											<th width="360">Описание</th>
+											<th width="160">Номер закупки</th>
+											<th width="320">Описание</th>
 										</tr>
 									</thead>
 									<tbody>

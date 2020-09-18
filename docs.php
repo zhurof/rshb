@@ -43,13 +43,34 @@
 							</div>
 						</div>
 						<div class="docs__body">
-							<a href="document.pdf" class="file-link" target="_blank">Правила страхования жизни №2-НСЖ (действуют с 23.03.2020)</a>
-							<a href="document.pdf" class="file-link" target="_blank">Правила страхования жизни №1-РСЖ (действуют с 20.01.2020)</a>
-							<a href="document.pdf" class="file-link" target="_blank">Правила страхования жизни №1-НСЖ от 25.04.2019 (действуют с 25.04.2019)</a>
-							<a href="document.pdf" class="file-link" target="_blank">Заявление на отказ от договора страхования после периода охлаждения</a>
-							<a href="document.pdf" class="file-link" target="_blank">Заявление на отказ от договора страхования в период охлаждения</a>
-							<a href="document.pdf" class="file-link" target="_blank">Заявление на страховую выплату по дожитию</a>
-							<a href="document.pdf" class="file-link" target="_blank">Заявление на страховую выплату по договору накопительного страхования жизни</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Правила страхования жизни №2-НСЖ (действуют с 23.03.2020)</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Правила страхования жизни №1-РСЖ (действуют с 20.01.2020)</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Правила страхования жизни №1-НСЖ от 25.04.2019 (действуют с 25.04.2019)</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Заявление на отказ от договора страхования после периода охлаждения</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Заявление на отказ от договора страхования в период охлаждения</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Заявление на страховую выплату по дожитию</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Заявление на страховую выплату по договору накопительного страхования жизни</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -15,22 +15,93 @@
 					<div class="page-head">
 						<h1 class="page-head__title">Общие сведения</h1>
 					</div>
-					<div class="text-block text-block--features text-block--small-gap">
-						<p><strong>Полное наименование организации:</strong> Общество с ограниченной ответственностью «РСХБ-Страхование жизни»</p>
-						<p><strong>Сокращенное наименование:</strong> ООО «РСХБ-Страхование жизни»</p>
-						<p><strong>ОГРН:</strong> 5177746158948</p>
-						<p><strong>ИНН:</strong> 7704447253</p>
-						<p><strong>КПП:</strong> 770401001</p>
-						<p><strong>Регистрационный номер по Единому государственному реестру субъектов страхового дела:</strong> 4358</p>
-						<p><strong>Место нахождения:</strong> Российская Федерация, г. Москва</p>
-						<p><strong>Адрес:</strong> 119034, г. Москва, Гагаринский переулок, дом 3, этаж 1, помещение II, комната 18 (Центральный офис).</p>
-						<p><strong>Иные офисы страховой организации (представительства и филиалы):</strong> отсутствуют.</p>
-						<p><strong>Телефон:</strong> 8 (495) 745 99 55</p>
-						<p><strong>Адрес официального сайта:</strong> www.rshbins-life.ru</p>
-						<p><strong>Информация о членстве в саморегулируемой организации:</strong> член Всероссийского союза страховщиков (решение о дате приема в члены СРО 13 июля 2018 года, регистрационный номер 244)</p>
-						<p><strong>Информация об используемом страховой организацией знаке обслуживания:</strong> зарегистрированное право на знак обслуживания (товарный знак) отсутствует.</p>
-						<p><strong>Информация о страховой группе, в состав которой входит ООО «РСХБ-Страхование жизни»:</strong> страховая группа «РСХБ-Страхование»</p>
-						<p><strong>Орган, осуществляющий полномочия по контролю и надзору за страховой деятельностью страховых организаций:</strong> Банк России www.cbr.ru</p>
+					<div class="about">
+						<div class="about__text">
+							<p>РСХБ-Страхование жизни — это команда профессионалов с многолетним опытом работы в сфере страхования жизни.</p>
+							<p>Мы предлагаем продукты инвестиционного и накопительного страхования жизни, а также полисы страхования от критических заболеваний.</p>
+							<p>Мы предлагаем сервисы и продукты, основываясь на Ваших индивидуальных потребностях и подбираем то, что нужно именно Вам! Наша сила в команде и активном развитии цифровых сервисов.</p>
+						</div>
+						<div class="box about__stat">
+							<div class="stat-card stat-card--small wow fadeInUp">
+								<h3 class="stat-card__title"><span class="counter counter--year">2018</span> год</h3>
+								<p>первые договоры инвестиционного страхования&nbsp;жизни</p>
+							</div>
+							<div class="stat-card stat-card--small wow fadeInUp" data-wow-delay="0.3s">
+								<h3 class="stat-card__title"><span class="counter" data-wow-delay="0.3s">14</span> млрд. </h3>
+								<p>размер страховых резервов компании</p>
+							</div>
+							<div class="stat-card stat-card--small wow fadeInUp" data-wow-delay="0.6s">
+								<h3 class="stat-card__title"><span class="counter" data-wow-delay="0.6s">1</span> 200+</h3>
+								<p>точек продаж в 67 регионах России</p>
+							</div>
+							<div class="stat-card stat-card--small wow fadeInUp" data-wow-delay="0.9s">
+								<h3 class="stat-card__title"><span class="counter" data-wow-delay="0.9s">20</span>+</h3>
+								<p>более 20 программ мы предлагаем вам сегодня</p>
+							</div>
+						</div>
+						<h2 class="about__subtitle">Основные направления</h2>
+						<div class="box about__directions">
+							<div class="direction-card">
+								<a href="catalog.php" class="direction-card__pic">
+									<img src="img/category/0.jpg" alt="">
+								</a>
+								<div class="direction-card__text">
+									<h3 class="direction-card__title"><a href="catalog.php">Программы накопления</a></h3>
+									<ul class="direction-card__list">
+										<li><a href="product.php">Мечты под защитой</a></li>
+										<li><a href="product.php">Золотой запас</a></li>
+										<li><a href="product.php">Безусловный доход</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="direction-card">
+								<a href="catalog.php" class="direction-card__pic">
+									<img src="img/category/1.jpg" alt="">
+								</a>
+								<div class="direction-card__text">
+									<h3 class="direction-card__title"><a href="catalog.php">Программы инвестирования</a></h3>
+									<ul class="direction-card__list">
+										<li><a href="product.php">Недюжинный доход</a></li>
+										<li><a href="product.php">Вершина успеха</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="direction-card">
+								<a href="catalog.php" class="direction-card__pic">
+									<img src="img/category/2.jpg" alt="">
+								</a>
+								<div class="direction-card__text">
+									<h3 class="direction-card__title"><a href="catalog.php">Программы здоровья</a></h3>
+									<ul class="direction-card__list">
+										<li><a href="product.php">Выбери здоровье</a></li>
+										<li><a href="product.php">Выбери здоровье ПЛЮС</a></li>
+										<li><a href="product.php">Здоровье под защитой</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="about__text">
+							<h2>Наши награды</h2>
+							<ul>
+								<li><a href="post.php"><strong>Премия «Проект года»</strong></a> 2020 г. в номинации «Лучшее отраслевое решение»</li>
+								<li><a href="post.php"><strong>Премия RETAIL FINANCE AWARDS</strong></a> 2019 в номинации «Лучшее IT- решение для страхового бизнеса»</li>
+								<li><a href="post.php"><strong>«Лучший дебют»</strong></a> 2019 г. (среди компаний, существующих на рынке не более 3-х лет) диплом ООО «РАЭКС - Аналитика»</li>
+							</ul>
+							<div class="table-wrapper">
+								<table>
+									<tbody>
+										<tr>
+											<th>Чуйко Андрей Александрович </th>
+											<td>Генеральный директор</td>
+										</tr>
+										<tr>
+											<th>Рубина Мария Николаевна</th>
+											<td>Главный бухгалтер</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 				<? include "aside.php"; ?>

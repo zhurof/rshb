@@ -5,7 +5,7 @@
 				<ul class="breadcrumbs__inner">
 					<li><a href="/">Главная страница</a></li>
 					<li><a href="/">Компания</a></li>
-					<li>Команда</li>
+					<li>Контакты</li>
 				</ul>
 			</div>
 		</div>
@@ -13,7 +13,7 @@
 			<div class="wrapper sidebar-page__wrapper">
 				<div class="sidebar-page__main">
 					<div class="page-head">
-						<h1 class="page-head__title">Команда</h1>
+						<h1 class="page-head__title">Контакты</h1>
 					</div>
 					<div class="contacts">
 						<div class="contacts__text">

@@ -15,10 +15,10 @@
 						<h1 class="page-head__title">Карта сайта</h1>
 					</div>
 					<div class="text-block text-block--small-gap">
-						<ol>
-							<li><a href="category.php" target="_blank">Главная</a></li>
+						<ul>
+							<li><a href="/" target="_blank">Главная</a></li>
+							<li><a href="catalog.php" target="_blank">Каталог</a></li>
 							<li><a href="category.php" target="_blank">Категория</a></li>
-							<li><a href="subcategory.php" target="_blank">Подкатегория</a></li>
 							<li><a href="product.php" target="_blank">Товар/услуга</a></li>
 							<li><a href="about.php" target="_blank">О компании</a></li>
 							<li><a href="contacts.php" target="_blank">Контакты</a></li>
@@ -31,9 +31,11 @@
 							<li><a href="corruption.php" target="_blank">Противодействие коррупции</a></li>
 							<li><a href="docs.php" target="_blank">Документы</a></li>
 							<li><a href="procurements.php" target="_blank">Закупки</a></li>
-							<li><a href="feedback.php" target="_blank">Обратная связь</a></li>
-							<li><a href="#feedback" data-fancybox>Обратная связь (модальное окно)</a></li>
-						</ol>
+							<li><a href="#feedback" data-fancybox>Обратная связь</a></li>
+							<li><a href="search.php" target="_blank">Поиск</a></li>
+							<li><a href="to-clients.php" target="_blank">Частным клиентам</a></li>
+							<li><a href="404.php" target="_blank">404</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

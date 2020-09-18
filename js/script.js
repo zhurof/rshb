@@ -1,10 +1,92 @@
-﻿$('.menu-btn').click(function(){
+﻿//устанавка необходимых css-переменных. Нпример, в -webkit- браузерах на мобильных платформах 100vh работает некорректно из-за адресной строки, а 100vw во всех браузерах включает в себя ширину полосы прокрутки
+function setCssVariables(){
+	document.documentElement.style.setProperty('--w-height',window.innerHeight + 'px');
+	document.documentElement.style.setProperty('--w-width',document.body.clientWidth + 'px');
+	document.documentElement.style.setProperty('--sb-width',(innerWidth - document.body.clientWidth) + 'px');
+	//высота частей шапки
+	document.documentElement.style.setProperty('--h-top-height',document.querySelector('.header__topline').clientHeight + 'px');
+	document.documentElement.style.setProperty('--h-bottom-height',document.querySelector('.header__bottomline').clientHeight + 'px');
+}
+setCssVariables();
+$(window).resize(setCssVariables);
+
+
+//шапка
+var scrollTop = pageYOffset;
+
+if(pageYOffset) $('.header').addClass('header--fixed');
+
+$(window).scroll(function(){
+	var header = $('.header'),
+			sidebar = $('.sidebar__inner');
+	if(pageYOffset){
+		header.addClass('header--fixed')
+	}else{
+		header.removeClass('header--fixed')
+	}
+	if(scrollTop < pageYOffset && pageYOffset > innerHeight / 4){ //если прокрутка вниз
+		
+		header.not('.header--open').addClass('header--hidden');//скрываем шапку, если меню не открыто
+		
+		if(!header.is('.header--open')) sidebar.removeClass('sidebar__inner--translated')
+	}else if(scrollTop > pageYOffset){
+		header.removeClass('header--hidden');
+		
+		sidebar.addClass('sidebar__inner--translated')
+	}
+	scrollTop = pageYOffset;
+})
+
+//Специально для "любимого" IE, который не поддерживает position: sticky. Прилипание содержимого сайдбара к верху
+if(navigator.userAgent.indexOf('Trident') != -1 && $('.sidebar .sidebar__inner').length){
+	var headerHeight = $('.header__bottomline').outerHeight(),
+			sidebar = $('.sidebar'),
+			sidebarHeight = $('.sidebar').outerHeight(),
+			sidebarContent = $('.sidebar__inner'),
+			sidebarContentHeight = sidebarContent.outerHeight(),
+			start = sidebar.offset().top,
+			end = start + sidebarHeight;
+			
+	if(sidebarHeight > sidebarContentHeight){ 
+		sidebarContent.width(sidebar.width());		
+		
+		$(window).scroll(function(){			
+			//на некоторых страницах высота сайдбара непостоянна из-за меняющейся высоты основного контента (аккордионы), поэтому лучше пересчитывать
+			sidebarHeight = $('.sidebar').outerHeight();
+			end = start + sidebarHeight;
+			
+			if(pageYOffset > start - headerHeight - 15){				
+				if(pageYOffset < end - sidebarContentHeight){
+					sidebarContent.css({
+						position: 'fixed',
+						top: headerHeight + 15,
+						bottom: ''
+					})
+				}else{
+					sidebarContent.css({
+						position: 'absolute',
+						top: '',
+						bottom: 0
+					})
+				}			
+			}else{
+				sidebarContent.css('position','')
+			}
+		})
+	}		
+}
+
+
+$('.menu-btn').click(function(){
 	$(this).toggleClass('menu-btn--active');
 	if($(this).is('.menu-btn--active')){
 		$('.header').addClass('header--open');
+		$('body').addClass('scroll-hidden');
 	}else{
 		$('.header').removeClass('header--open');		
+		$('body').removeClass('scroll-hidden');
 	}	
+	$('.header').removeClass('header--hidden');
 	$('.header__menu').toggleClass('header__menu--open');
 	$('.search-btn').removeClass('search-btn--active');
 	$('.header__search').removeClass('header__search--active')
@@ -20,6 +102,7 @@ $('.search-btn').click(function(){
 		$('.header__search').addClass('header__search--active').find('input').focus();
 		$('.menu-btn').removeClass('menu-btn--active');
 		$('.header__menu').removeClass('header__menu--open');
+		$('body').removeClass('scroll-hidden');
 	}	
 })
 $('.search-form__close-btn').click(function(){
@@ -28,7 +111,11 @@ $('.search-form__close-btn').click(function(){
 	$('.search-btn').removeClass('search-btn--active');
 })
 $('.search-form__clear-btn').click(function(){
-	$(this).siblings('.search-form__input').val('')
+	$(this).siblings('.search-form__input').val('').focus()
+})
+
+$('.search-widget__clear-btn').click(function(){
+	$(this).siblings('.search-widget__input').val('').focus()
 })
 
 $('.header__menu-list a:not(:only-child)').click(function(e){
@@ -39,32 +126,59 @@ $('.header__menu-list a:not(:only-child)').click(function(e){
 		$('.header__menu-list>.open').not($(this).parent()).removeClass('open').children('ul').slideUp(300);
 	}
 })
-$('.top-block').slick({
+$('.header__location').click(function(e){
+	e.preventDefault();
+	$('.location').fadeIn(300)
+})
+$('.location__close-btn').click(function(){
+	$(this).closest('.location').fadeOut(300)
+})
+$('.location__list a').click(function(e){
+	e.preventDefault();
+	var value = $(this).text();
+	$('.header__location span').text(value);
+	$('.location').fadeOut(300)
+})
+
+//
+$('.top-block__slider').slick({
 	autoplay: true,
 	autoplaySpeed: 5000,
 	pauseOnHover: false,
+	speed: 1000,
+	touchThreshold: 100,
+	asNavFor: '.top-block__nav',
 	prevArrow: '<span class="top-block__arrow top-block__arrow--prev icon-angle-left" />',
 	nextArrow: '<span class="top-block__arrow top-block__arrow--next icon-angle-right" />',
-	dots: true,
-	dotsClass: 'top-block__nav',
+	dotsClass: 'top-block__dots',
 	customPaging: function(slick,i){
-		return slick.$slides.eq(i).find('.top-block__title').text();
+		return slick.$slides.eq(i).find('.top-block__title').html();
 	},
 	responsive: [
 		{
 			breakpoint: 1200,
 			settings: {
-				arrows: false
+				arrows: false,
+				dots: true
 			}
 		},{
-			breakpoint: 992,
+			breakpoint: 768,
 			settings: {
 				arrows: false,
+				dots: true,
 				customPaging: function(){return ''}
 			}
 		}
 	]
 })
+$('.top-block__nav').slick({
+	asNavFor: '.top-block__slider',
+	touchThreshold: 100,
+	variableWidth: true,
+	arrows: false,
+	focusOnSelect: true
+})
+
 
 $('.services-block__trigger').click(function(e){
 	e.preventDefault();
@@ -88,15 +202,14 @@ $('.category-block__slider').slick({
 	slidesToShow: 2,
 	prevArrow: '<span class="category-block__arrow category-block__arrow--prev icon-angle-left" />',
 	nextArrow: '<span class="category-block__arrow category-block__arrow--next icon-angle-right" />',
-	customPaging: function(){return ''},
-	dotsClass: 'category-block__dots',
+	touchThreshold: 100,
 	responsive: [
 		{
-			breakpoint: 1200,
+			breakpoint: 768,
 			settings: {				
 				slidesToShow: 1,
+				variableWidth: true,
 				arrows: false,
-				dots: true
 			}			
 		}
 	]
@@ -155,6 +268,14 @@ $('.feedback__nav li').click(function(){
 	}
 })
 
+$('.search__nav li').click(function(){
+	var index = $(this).index();
+	if(!$(this).is('.active')){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).closest('.search').find('.search__tab').hide().eq(index).fadeIn(300);
+	}
+})
+
 //всякое визуальное барахло
 new WOW().init();
 
@@ -210,7 +331,6 @@ function initMap(){
 }
 
 $('.date-input').datepicker({
-	range: true,
 	position: 'bottom right',
 	multipleDatesSeparator: ' - '
 })
@@ -254,4 +374,42 @@ $('.cookies__btn').click(function(e){
 	e.preventDefault()
 	document.cookie = "cookie-message=true";
 	$(this).parents('.cookies').fadeOut(300);
+})
+
+//Свернутное положение текста в карточках категорий
+function checkTextOverflow(){
+	$('.category-card__text').each(function(){
+		if(this.scrollHeight > this.clientHeight){
+			$(this).addClass('category-card__text--hidden');
+			if(!$(this).next('.category-card__dropdown').length){
+				$(this).after('<span class="category-card__dropdown icon-angle-down"></span>')
+			}
+		}else{
+			$(this).removeClass('category-card__text--hidden')
+			$(this).next('.category-card__dropdown').remove()
+		}
+	})
+}
+checkTextOverflow();
+$(window).resize(checkTextOverflow);
+
+$('.category-card').on('click','.category-card__dropdown',function(e){
+	$(this).prev('.category-card__text').addClass('category-card__text--open');
+	$(this).remove()
+})
+
+//пошаговая форма обратной связи
+$('.feedback__fieldset').find('input,select,textarea').on('input change',function(){
+	if(!$(this).closest('.feedback__fieldset').find(':invalid').length){
+		$(this).closest('.feedback__fieldset').next('.feedback__fieldset').slideDown(300)
+	}
+})
+
+$('.accordion__trigger').click(function(){
+	$(this).toggleClass('accordion__trigger--active');
+	$(this).siblings('.accordion__text').slideToggle(300)
+})
+$('.accordion__btn').click(function(){
+	$(this).closest('.accordion').find('.accordion__item').filter(':hidden').fadeIn(300)
+	$(this).remove()
 })

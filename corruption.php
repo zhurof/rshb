@@ -17,7 +17,10 @@
 					<div class="text-block text-block--small-gap">
 						<p>
 							<span>Нормативные правовые и иные акты в сфере противодействия коррупции</span>
-							<a href="document.pdf" class="file-link" target="_blank">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</a>
+							<a href="document.pdf" class="file-link" target="_blank">
+								<span class="file-link__title">Федеральный закон от 25 декабря 2008 г. № 273-ФЗ «О противодействии коррупции»</span>
+								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
+							</a>
 						</p>
 						<p>
 							<span>Внутренние документы ООО «РСХБ-Страхование жизни» в сфере противодействия коррупции</span>

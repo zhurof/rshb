@@ -148,3 +148,24 @@
 .icon-upload:before {
   content: "\e918";
 }
+.icon-book:before {
+  content: "\e919";
+}
+.icon-drawer:before {
+  content: "\e91a";
+}
+.icon-pulse:before {
+  content: "\e91b";
+}
+.icon-question-sign:before {
+  content: "\e91c";
+}
+.icon-shield:before {
+  content: "\e91d";
+}
+.icon-shopping-cart:before {
+  content: "\e91e";
+}
+.icon-wallet:before {
+  content: "\e91f";
+}

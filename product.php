@@ -17,135 +17,241 @@
 						<h1 class="page-head__title">Мечты под защитой</h1>
 						<h3 class="page-head__subtitle">Уверенность в достижении поставленных целей</h3>
 					</div>
-					<div class="text-block text-block--small-gap">
-						<p>Какой бы ни была Ваша мечта — покупка квартиры, автомобиля, формирование стартового капитала для открытия бизнеса или финансовой подушки безопасности, — мы поможем ее осуществить и защитим в случае непредвиденных обстоятельств.</p>
-						<p><img src="img/banner.jpg" alt=""></p>						
+					<div class="product">
+						<div class="product__text">
+							<p>Программа, с которой мечты сбываются! Мы поможем достичь целей и защитим Вас и&nbsp;Ваших близких при неблагоприятных жизненных обстоятельствах. Для достижения целей достаточно регулярно (раз в год) вносить платежи по программе «Мечты под защитой», и Вы&nbsp;сможете воплотить свои мечты.</p>
+							<p>На что можно копить с программой «Мечты под защитой»:</p>
+							<ul>
+								<li>На крупные покупки (автомобиль, недвижимость)</li>
+								<li>На стартовый капитал</li>
+								<li>На свадьбу и медовый месяц</li>
+								<li>На обучение детей</li>
+							</ul>
+						</div>
+						<div class="product__pic">
+							<img src="img/services/big/0.png" alt="">
+						</div>					
 					</div>
 					<div class="stat-block">
 						<div class="box stat-block__box">
 							<div class="stat-block__item">
-								<h3 class="stat-block__item-title">5 лет</h3>
+								<h3 class="stat-block__item-title">5 – 10 лет</h3>
 								<p>срок программы</p>
 							</div>
 							<div class="stat-block__item">
-								<h3 class="stat-block__item-title">25 000 – 300 000 р.</h3>
-								<p>сумма страхового взноса в год</p>
+								<h3 class="stat-block__item-title">30 000 – 300 000 р.</h3>
+								<p>размер страхового взноса в год</p>
 							</div>
 							<div class="stat-block__item">
-								<h3 class="stat-block__item-title">до 200%</h3>
+								<h3 class="stat-block__item-title">до 300%</h3>
 								<p>страховая защита от суммы взноса (не считая возврата взноса)</p>
 							</div>
 							<div class="stat-block__item">
-								<h3 class="stat-block__item-title">18 – 60 лет</h3>
-								<p>возраст на застрахованного (на момент заключения договора)</p>
+								<h3 class="stat-block__item-title">18 – 65 лет</h3>
+								<p>возраст на застрахованного <br>(на момент заключения договора)</p>
 							</div>
 						</div>
 					</div>
-					<div class="info-block">
+					<div class="info-block info-block--small-gap">
 						<h2 class="info-block__title">Подробнее о продукте</h2>
 						<div class="info-block__body">
 							<ul class="info-block__nav">
 								<li>Как работает</li>
-								<li>Страховая защита</li>
-								<li class="active">Получить</li>
+								<li>Страховые риски и защита</li>
+								<li class="active">Пример расчета</li>
+								<li>Преимущества</li>
 							</ul>
 							<div class="info-block__tabs">
-								<div class="info-block__tab info-block__tab--text">
-									<div class="info-block__tab-inner">
+								<div class="info-block__tab">
+									<div class="info-block__text">
 										<h3>Как работает</h3>
 										<ul>
-											<li>Вы выбираете срок накопления (от 5 до 10 лет) и комфортный для Вас размер взноса или сумму, которую хотите получить по окончании действия договора</li>
-											<li>Вы делаете регулярные взносы</li>
-											<li>По окончании срока действия договора застрахованное лицо или выгодоприобретатель получает 100% вложенных средств, а также дополнительный инвестиционный доход в случае его наличия.</li>
-											<li>У Вас есть возможность ежегодно получать социальный налоговый вычет в размере 13% от суммы взносов (не более 15 600 рублей в год)</li>
-											<li>Ваша жизнь и здоровье застрахованы на весь срок действия программы на сумму до 300% от суммы взносов по договору</li>
+											<li>Выбираете валюту накопления – рубли или доллары США</li>
+											<li>Выбираете какую сумму хотите накопить и за какой срок</li>
+											<li>Раз в год вносите платежи</li>
+											<li>Получаете страховую защиту на весь срок действия договора   и услугу «Медицинский сервис»</li>
 										</ul>
 									</div>
 								</div>
-								<div class="info-block__tab info-block__tab--text">
-									<h3>Страховая защита</h3>
-									<p>на примере страхового взноса 50.000 руб. в год (выплата в % от базовой страховой суммы)</p>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th width="200">Несчастный случай</th>
-													<th width="120">Выплата</th>
-													<th width="200">На примере</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>При уходе из жизни в результате несчастного случая</td>
-													<td><strong>2x&nbsp;&nbsp;+&nbsp;&nbsp;100%</strong></td>
-													<td>
-														<p><strong>500.000 руб.</strong></p>
-														<ul>
-															<li>возврат ранее уплаченных взносов     (от 50 до 250 тыс. руб.)</li>
-															<li>дополнительный инвестиционный доход</li>
-														</ul>
-													</td>
-												</tr>
-												<tr>
-													<td>При установлении инвалидности 1-ой группы НС </td>
-													<td><strong>100%</strong></td>
-													<td>
-														<p><strong>250.000 руб.</strong></p>
-														<ul>
-															<li>освобождение от уплаты оставшихся страховых взносов (от 50 до 200 тыс. руб.)</li>
-															<li>выплата страховой суммы при дожитии</li>
-															<li>дополнительный инвестиционный доход</li>
-														</ul>
-													</td>
-												</tr>
-												<tr>
-													<td>При установлении инвалидности 2-ой группы НС </td>
-													<td><strong>75%</strong></td>
-													<td>
-														<p><strong>187.000 руб.</strong></p>
-														<ul>
-															<li>выплата страховой суммы при дожитии</li>
-															<li>дополнительный инвестиционный доход</li>
-														</ul>
-													</td>
-												</tr>
-												<tr>
-													<td>При уходе из жизни по любой причине, кроме НС</td>
-													<td><strong>—</strong></td>
-													<td>
-														<ul>
-															<li>возврат всех ранее уплаченных взносов (от 50 до 250 тыс. руб.)</li>
-															<li>дополнительный инвестиционный доход</li>
-														</ul>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+								<div class="info-block__tab">
+									<div class="info-block__text">
+										<h3>Страховая защита</h3>
+										<p>на примере страхового взноса 50.000 руб. в год (выплата в % от базовой страховой суммы)</p>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th width="200">Несчастный случай</th>
+														<th width="120">Выплата</th>
+														<th width="200">На примере</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>При уходе из жизни в результате несчастного случая</td>
+														<td><strong>2x&nbsp;&nbsp;+&nbsp;&nbsp;100%</strong></td>
+														<td>
+															<p><strong>500.000 руб.</strong></p>
+															<ul>
+																<li>возврат ранее уплаченных взносов     (от 50 до 250 тыс. руб.)</li>
+																<li>дополнительный инвестиционный доход</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>При установлении инвалидности 1-ой группы НС </td>
+														<td><strong>100%</strong></td>
+														<td>
+															<p><strong>250.000 руб.</strong></p>
+															<ul>
+																<li>освобождение от уплаты оставшихся страховых взносов (от 50 до 200 тыс. руб.)</li>
+																<li>выплата страховой суммы при дожитии</li>
+																<li>дополнительный инвестиционный доход</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>При установлении инвалидности 2-ой группы НС </td>
+														<td><strong>75%</strong></td>
+														<td>
+															<p><strong>187.000 руб.</strong></p>
+															<ul>
+																<li>выплата страховой суммы при дожитии</li>
+																<li>дополнительный инвестиционный доход</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>При уходе из жизни по любой причине, кроме НС</td>
+														<td><strong>—</strong></td>
+														<td>
+															<ul>
+																<li>возврат всех ранее уплаченных взносов (от 50 до 250 тыс. руб.)</li>
+																<li>дополнительный инвестиционный доход</li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 								<div class="info-block__tab" style="display: block">
-									<h3 class="info-block__subtitle">Преимущества</h3>
-									<div class="box info-block__box">
-										<div class="info-block__card">
-											<div class="info-block__card-icon"><img src="img/icons/copy.svg" alt=""></div>
-											<div class="info-block__card-text">
-												<h4 class="info-block__card-title">Соберите необходимые документы</h4>
-												<p>Паспорт, СНИЛС и документ, подтверждающий доход</p>
-											</div>												
+									<div class="calc-block">
+										<h2 class="calc-block__title">Пример расчета</h2>
+										<div class="calc-block__main">
+											<div class="calc-block__field">
+												<div class="calc-block__label">Сумма инвестиций</div>
+												<div class="range-field">
+													<div class="range-field__output">500 000 Р.</div>
+													<input type="text" class="range-field__input" data-values="50 тыс.,100 тыс.,500 тыс.,1 млн +" data-from="2">
+												</div>
+											</div>
+											<div class="calc-block__field">
+												<div class="calc-block__label">Срок инвестиций (от 24 до 120 мес)</div>
+												<div class="radio-group">
+													<label class="radio-group__item">
+														<input type="radio" name="month-amount" value="12" class="radio-group__input">
+														<span class="radio-group__value">12</span>									
+														<span class="radio-group__legend">1 год</span>
+													</label>
+													<label class="radio-group__item">
+														<input type="radio" name="month-amount" value="24" class="radio-group__input">
+														<span class="radio-group__value">24</span>									
+														<span class="radio-group__legend">2 года</span>
+													</label>
+													<label class="radio-group__item">
+														<input type="radio" name="month-amount" value="36" class="radio-group__input" checked>
+														<span class="radio-group__value">36</span>									
+														<span class="radio-group__legend">3 года</span>
+													</label>
+													<label class="radio-group__item">
+														<input type="radio" name="month-amount" value="60" class="radio-group__input">
+														<span class="radio-group__value">60</span>									
+														<span class="radio-group__legend">5 лет</span>
+													</label>
+													<label class="radio-group__item">
+														<input type="radio" name="month-amount" value="120" class="radio-group__input">
+														<span class="radio-group__value">120</span>									
+														<span class="radio-group__legend">10 лет</span>
+													</label>
+												</div>
+											</div>
 										</div>
-										<div class="info-block__card">
-											<div class="info-block__card-icon"><img src="img/icons/upload.svg" alt=""></div>
-											<div class="info-block__card-text">
-												<h4 class="info-block__card-title">Подайте документы онлайн или в офисе</h4>
-												<p>При подаче заявки онлайн отсканируйте все документы</p>
-											</div>												
+										<div class="calc-block__options">
+											<h3 class="calc-block__subtitle">Дополнительные опции</h3>
+											<label class="radio-btn calc-block__option">
+												<input type="radio" name="calc-block-option" value="С пополнением" class="radio-btn__input">
+												<span class="radio-btn__btn radio-btn__btn--small">С пополнением <span class="info info--small" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, natus."></span></span>
+											</label>
+											<label class="radio-btn calc-block__option">
+												<input type="radio" name="calc-block-option" value="Семейные" class="radio-btn__input" >
+												<span class="radio-btn__btn radio-btn__btn--small">Семейные <span class="info info--small" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, natus."></span></span>
+											</label>
+											<label class="radio-btn calc-block__option">
+												<input type="radio" name="calc-block-option" value="Снятие со счета" class="radio-btn__input">
+												<span class="radio-btn__btn radio-btn__btn--small">Снятие со счета <span class="info info--small" data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, natus."></span></span>
+											</label>
 										</div>
-										<div class="info-block__card">
-											<div class="info-block__card-icon"><img src="img/icons/signature.svg" alt=""></div>
-											<div class="info-block__card-text">
-												<h4 class="info-block__card-title">Подтвердите <br>оформление продукта</h4>
-												<p>После подтверждения ваш продукт активен </p>
-											</div>												
+										<button class="btn btn--medium btn--green calc-block__btn">Рассчитать стоимость</button>
+										<div class="calc-block__result">
+											<div class="calc-block__price">135 000 руб.</div>
+											<p>сумма выплат</p>
+										</div>
+									</div>
+								</div>
+								<div class="info-block__tab">
+									<div class="infographics">
+										<h3 class="infographics__title">Преимущества</h3>
+										<div class="box infographics__box">
+											<div class="infographics__item">
+												<div class="infographics__item-pic">
+													<img src="img/icons/wallet.svg" alt="">
+												</div>
+												<div class="infographics__item-text">
+													<h4 class="infographics__item-title">Финансовые</h4>
+													<p>Возможность получения дополнительного инвестиционного дохода</p>
+												</div>
+											</div>
+											<div class="infographics__item">
+												<div class="infographics__item-pic">
+													<img src="img/icons/libra.svg" alt="">
+												</div>
+												<div class="infographics__item-text">
+													<h4 class="infographics__item-title">Юридические</h4>
+													<p>Страховые выплаты получают исключительно выгодоприобретатели, указанные в договоре</p>
+												</div>
+											</div>											
+											<div class="infographics__item">
+												<div class="infographics__item-pic">
+													<img src="img/icons/percent.svg" alt="">
+												</div>
+												<div class="infographics__item-text">
+													<h4 class="infographics__item-title">Налоговые</h4>
+													<p>Возможность получения социального налогового вычета в размере 13% от суммы взноса (но не более 15 600 руб. в год при условии ежегодного взноса 120 тыс. руб.)</p>
+												</div>
+											</div>
+											<div class="infographics__item">
+												<div class="infographics__item-pic">
+													<img src="img/icons/umbrella.svg" alt="">
+												</div>
+												<div class="infographics__item-text">
+													<h4 class="infographics__item-title">Страховые</h4>
+													<ul>
+														<li>Защита на случай наступления неблагоприятных событий. Действует по всему миру 24 часа в сутки, 365 дней году</li>
+														<li>Страхователь освобождается от уплаты взносов в случае получения инвалидности</li>
+													</ul>
+												</div>
+											</div>
+											<div class="infographics__item">
+												<div class="infographics__item-pic">
+													<img src="img/icons/pulse.svg" alt="">
+												</div>
+												<div class="infographics__item-text">
+													<h4 class="infographics__item-title">Медицинские</h4>
+													<p>Онлайн-консультации врача терапевта по вопросам медицинского характера</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -153,21 +259,37 @@
 						</div>
 					</div>
 					<article class="article">
-						<h2>Страховой случай</h2>
+						<h2>Мы защитим Ваши мечты</h2>
 						<p>Для получения страховой выплаты воспользуйтесь памяткой, соответствующей вашей программе.</p>
 						<h3>Порядок действий при наступлении страхового случая:</h3>
 						<ol>
-							<li>Уведомить страховую компанию о наступлении страхового случая:
+							<li>Страховая компания внесет взносы
 								<ul>
-									<li>по телефону <a href="tel:88005008778">8 800 500-87-78</a> (звонок по России бесплатный)</li>
-									<li>по электронной почте <a href="mailto:claims@rshb-life.ru">claims@rshb-life.ru</a></li>
-									<li>лично в <a href="javascript:;">отделении банка</a></li>
+									<li>Если в период накопления Страхователем получена инвалидность 1-ой группы по любой причине он будет освобожден от уплаты взносов на период действия инвалидности</li>
 								</ul>
 							</li>
-							<li>Приготовьтесь ответить на вопросы: № страхового сертификата, ФИО застрахованного лица и Страхователя, Наименование программы страхования, Вид страхового события, Страховая сумма по договору.</li>
-							<li>Заполнить заявление о наступлении страхового случая, воспользовавшись памяткой</li>
-							<li>Собрать документы и подать их в страховую компанию или в банк</li>
+							<li>Адресная передача капитала
+								<ul>
+									<li>Страховой договор имеет особый статус – до начала выплат, причитающиеся по нему средства не являются имуществом и не относятся к ценным бумагам, поэтому они не подлежат разделу и не могут быть предметом имущественных споров.</li>
+									<li>Договор страхования может быть заключен в отношении любого лица, независимо от родственных связей</li>
+								</ul>
+							</li>
+							<li>
+								Медицинский сервис
+								<ul>
+									<li>Медицинские консультации удаленно в любое время. Не нужно посещать медицинское учреждение</li>
+								</ul>
+							</li>
 						</ol>
+						<h3>Медицинский сервис - это</h3>
+						<ul>
+							<li>помощь в расшифровке результатов анализов;</li>
+							<li>обсуждение возможностей и способов решения медицинской проблемы;</li>
+							<li>помощь в выборе узкого специалиста по симптомам и жалобам, помощь в составлении</li>
+							<li>плана обследования;</li>
+							<li>консультирование по вопросам организации платной медицинской помощи (подбор</li>
+							<li>клиники, рекомендации по выбору врача);</li>
+						</ul>
 					</article>
 					<div class="schema">
 						<div class="schema__head">

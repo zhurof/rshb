@@ -46,8 +46,11 @@
 						<div class="post-card">
 							<div class="post-card__pic"></div>
 							<div class="post-card__text">
-								<div class="post-card__date">24 декабря 2020</div>
-								<h3 class="post-card__title"><a href="javascript:;">Андрей Чуйко возглавил ООО «РСХБ-Страхование жизни»</a></h3>
+								<div class="post-card__info">
+									<span class="post-card__date">24 декабря 2020</span>
+									<a href="javascript:;" class="post-card__link">Категория</a>
+								</div>
+								<h3 class="post-card__title"><a href="javascript:;">Андрей Чуйко возглавил <br>ООО «РСХБ-Страхование жизни»</a></h3>
 								<p>В Россельхозбанке Андрей Чуйко работает с 2014 года. Более трех лет был заместителем </p>
 							</div>
 						</div>
