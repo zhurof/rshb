@@ -35,6 +35,11 @@
 							<li><a href="search.php" target="_blank">Поиск</a></li>
 							<li><a href="to-clients.php" target="_blank">Частным клиентам</a></li>
 							<li><a href="404.php" target="_blank">404</a></li>
+							
+							<li><a href="articles.php" target="_blank">Статьи</a></li>
+							<li><a href="to-partners.php" target="_blank">Партнерам</a></li>
+							<li><a href="to-corp-clients.php" target="_blank">Корпоративным клиентам</a></li>
+							<li><a href="to-vip.php" target="_blank">VIP клиентам</a></li>
 						</ul>
 					</div>
 				</div>

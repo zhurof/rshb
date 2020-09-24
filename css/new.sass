@@ -1,0 +1,396 @@
+/*статьи*/
+.article-card
+	width: 440px
+	font-size: 16px
+	position: relative
+	border-radius: 10px
+	background: 
+		size: cover
+		position: center
+		repeat: no-repeat
+	min-height: 464px
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	padding: 36px
+	margin: 0 29px 62px	
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: inherit
+		background: linear-gradient(0deg, #D4D2D8 38.07%, rgba(212, 210, 216, 0) 90.48%)
+	&--dark
+		color: #fff
+		&:before
+			background: linear-gradient(0deg, #828B9C 38.07%, rgba(130, 139, 156, 0) 90.48%)
+	&--green
+		color: #fff
+		&:before
+			background: linear-gradient(0deg, #809E8A 38.07%, rgba(128, 158, 138, 0) 90.48%)
+	&--big
+		width: 938px
+		color: #fff
+		background-position: right center
+		justify-content: flex-start
+		&:before
+			background: linear-gradient(90deg, #6C7F9E 38.07%, rgba(108, 127, 158, 0) 90.48%)
+	&__text
+		width: 100%
+		max-width: 368px
+		position: relative
+	&__title
+		margin: 0 0 16/28*1em
+		a
+			color: inherit
+	&__link
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: inherit
+		
+/*Партнерам (на основе "О компании")*/
+.tiles
+	&__item
+		width: 233px
+		margin: 15px
+		background-color: #fff
+		border-radius: 10px
+		padding: 47px 26px 38px
+		text-align: center
+		font-size: 18px
+		box-shadow: 0 0 10px rgba(0,0,0,.15)
+		&-icon
+			display: block
+			height: 50px
+			margin: 0 auto 1.75em
+.form-block
+	padding: 64px
+	background: url(../img/operator.png) no-repeat right bottom/438px auto #F4F5F6
+	margin: 0 0 40px
+	&:last-child
+		margin-bottom: 0
+	&__head
+		max-width: 665px
+		margin: 0 0 1.5em
+		&:last-child
+			margin-bottom: 0
+	&__title
+		font-size: 1.5em
+		font-weight: 600
+		line-height: 1
+		margin: 0 0 25/36*1em
+	&__inner
+		max-width: 392px
+		font-size: 18px
+	&__input
+		font-size: 18px
+		padding: 20.5px 32px
+	&__btn
+		margin: 0 0 24px
+		&:last-child
+			margin-bottom: 0
+	&__option
+		font-size: 1em
+		
+/*Корпоративным клиентам*/
+.promo-block
+	margin: 0 0 34/24*1em
+	&:last-child
+		margin-bottom: 0
+.promo-card
+	width: 500px
+	background-color: #fff
+	border-radius: 10px
+	box-shadow: 0 0 10px rgba(0,0,0,.15)
+	padding: 36px 36px 47px
+	font-size: 16px	
+	display: flex
+	flex-direction: column
+	margin: 0 15px 30px
+	&__head
+		border-bottom: 1px solid #808080
+		padding: 0 0 36px
+		margin: 0 0 36px
+		&:last-child
+			margin-bottom: 0
+	&__body
+		margin: 0 0 auto
+	&__title
+		font-size: 1.5em
+		margin: 0 0 16/24*1em
+	&__price
+		font-size: 46/16*1em
+		line-height: 1
+		font-weight: bold
+		margin: 0 0 4px
+		&:last-child
+			margin-bottom: 0
+	&__list
+		font-size: 18/16*1em
+		list-style-image: url(../img/list-marker-18.svg)
+		padding-left: 1em
+		margin: 0 0 2em
+		&:last-child
+			margin-bottom: 0
+		>.disabled
+			filter: brightness(0)
+			opacity: .4
+	&__offers
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__offer
+		width: calc(50% - .75em)
+		margin: 0 0 36/16*1em
+	&__subtitle
+		font-size: 18/16*1em
+		margin: 0 0 .5em		
+.action-banner
+	background: 
+		color: #F4F5F6
+		position: right bottom
+		repeat: no-repeat
+		size: 48% auto
+	padding: 64px 40% 64px 64px
+	margin: 0 0 30px
+	&:last-child
+		margin-bottom: 0
+	&__title
+		font-size: 1.5em
+		font-weight: 600
+		line-height: 1
+		margin: 0 0 25/36*1em
+		
+/*VIP-клиентам*/
+.banner
+	background-color: #F4F5F6
+	padding: 65px 65px 65px 42.64%
+	position: relative
+	line-height: 1.5
+	margin: 0 0 calc(10% + 1.5em)
+	&:last-child
+		margin-bottom: 10%
+	&__img
+		width: 408/1032*100%
+		position: absolute
+		bottom: 0
+		transform: translateY(28%)
+		left: 24/1032*100%
+		
+@media(min-width: 992px)
+	/*статьи*/
+	.article-card
+		&__title
+			transition: all .2s ease
+		&:hover &__title
+			color: #238441
+		&--green:hover &__title,
+		&--big:hover &__title,
+		&--dark:hover &__title
+			color: #ddd
+
+@media(max-width: 1519px)
+	/*статьи*/
+	.article-card
+		width: 370px
+		min-height: 410px
+		padding: 30px
+		margin: 0 15px 30px
+		&--big
+			width: 770px
+		&__text
+			max-width: 310px
+		&__title
+			font-size: 24px
+			
+	/*Партнерам*/
+	.form-block
+		padding: 45px 32px
+		background-size: 45% auto
+		
+	/*VIP-клиентам*/
+	.banner
+		padding: 32px 32px 32px 42.64%
+		
+	/*Корпоративным клиентам*/
+	.action-banner
+		padding: 32px 40% 32px 32px
+	.promo-card
+		width: 363px
+		font-size: 14px
+		padding: 36px 26px
+		&__head
+			padding-bottom: 26px
+			margin-bottom: 26px
+			
+@media(max-width: 1199px)
+	/*статьи*/
+	.article-card
+		width: 466px
+		&--big
+			width: calc(100% - 30px)
+			order: 1
+		&__text
+			max-width: 406px
+	.news
+		&__box
+			&--grid
+				display: flex
+				margin: 0 -15px
+	/*Партнерам*/
+	.tiles
+		&__box
+			margin: 0 -8px
+		&__item
+			margin: 8px
+			font-size: 14px
+			padding: 30px 20px
+	.form-block
+		&__inner
+			font-size: inherit
+			max-width: 55%
+		&__input
+			font-size: 14px
+			padding: 20px 20px
+		&__option
+			font-size: inherit
+	/*Корпоративным клиентам*/
+	.promo-block
+		&__box
+			margin: 0 -8px
+	.promo-card
+		width: 308px
+		font-size: 12px
+		margin: 0 8px 16px
+		
+@media(max-width:991px)
+	/*статьи*/
+	.article-card
+		width: 330px
+		padding: 20px
+		order: 0
+		font-size: 14px
+		justify-content: flex-end
+		min-height: 340px
+		&--big
+			&:before
+				background: linear-gradient(0deg, #6C7F9E 38.07%, rgba(108, 127, 158, 0) 90.48%)
+		&__title
+			font-size: 1.5em
+	/*Партнерам*/
+	.tiles
+		&__item
+			width: 200px
+			font-size: inherit
+			&-icon
+				height: 3em
+				margin: 0 auto 1em
+	.form-block
+		padding: 30px 20px
+		&__input
+			font-size: 12px
+			padding: 13px 20px
+			
+	/*VIP-клиентам*/
+	.banner
+		padding: 20px 20px 20px 42.64%
+		&__img
+			left: 0	
+			
+	/*Корпоративным клиентам*/
+	.promo-block
+		&__box
+			display: block
+			margin: 0
+	.promo-card
+		width: auto
+		padding: 20px
+		margin: 0 0 16px
+		font-size: inherit
+		&__head
+			padding: 0 0 20px
+			margin: 0 0 20px
+		&__list
+			font-size: inherit
+			list-style-image: url(../img/list-marker-12.svg)
+	.action-banner
+		padding: 20px 40% 20px 20px
+		
+@media(max-width:767px)
+	/*статьи*/
+	.article-card
+		width: 280px
+		min-height: 290px
+		flex: 0 0 auto
+		margin: 0 15px
+		&__title
+			font-size: 1.2em
+	.news
+		&__box
+			&--grid
+				margin: 0 -15px 30px
+				
+	/*Партнерам*/
+	.tiles
+		&__box
+			flex-wrap: nowrap
+			max-width: calc(100% + 30px)
+			overflow: auto
+			padding-left: 7px
+			margin: 0 -15px 35px
+			&:after
+				content: ''
+				display: block
+				width: 7px
+				flex: 0 0 auto
+		&__item
+			width: 200px
+			flex: 0 0 auto
+	.form-block
+		margin-left: -15px
+		margin-right: -15px
+		padding: 30px 15px
+		background-size: 35% auto
+		&__inner
+			max-width: 65%
+		&__input
+			font-size: 14px
+			padding: 15px 18px
+			
+	/*VIP-клиентам*/
+	.banner
+		padding: 30px 15px
+		&__img
+			position: static
+			transform: none
+			display: block
+			max-width: 100%
+			width: 230px
+			margin: 0 0 1.5em
+			
+	/*Корпоративным клиентам*/
+	.promo-card
+		font-size: 12px
+		&__list
+			font-size: 14/12*1em		
+			
+@media(max-width:479px)
+	/*Партнерам*/
+	.form-block
+		&__btn
+			display: block
+			width: 100%
+			padding: 0 10px
+			
+	/*Корпоративным клиентам*/
+	.action-banner
+		padding: 20px 20px 40%
+		background-size: auto 40%

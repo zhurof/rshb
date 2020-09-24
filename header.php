@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="libs/ion-range-slider/ion.rangeSlider.min.css" />
 	<link rel="stylesheet" href="libs/air-datepicker/datepicker.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/new.css" />
 </head>
 <body class="<?=$header_abs ? "" : "inner-page";?>">
 	<header class="header <?=$header_abs ? "header--abs" : "";?>">
