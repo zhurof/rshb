@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Вёрстка</title>
-	<meta name="viewport" content="width=device-width, shrink-to-fit=no" />	
-	
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no" />
+
 	<link rel="shortcut icon" type="image/png" href="img/favicon/icon_16x16.png" sizes="16x16">
   <link rel="shortcut icon" type="image/png" href="img/favicon/icon_32x32.png" sizes="32x32">
   <link rel="shortcut icon" type="image/png" href="img/favicon/icon_96x96.png" sizes="96x96">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" sizes="180x180">
-	
-	<link rel="stylesheet" href="css/fonts.css" />	
+
+	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/font-awesome.css" />
 	<link rel="stylesheet" href="libs/slick/slick.css" />
 	<link rel="stylesheet" href="libs/wow/animate.css" />
@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="libs/air-datepicker/datepicker.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/new.css" />
+	<link rel="stylesheet" href="css/new2.css" />
 </head>
 <body class="<?=$header_abs ? "" : "inner-page";?>">
 	<header class="header <?=$header_abs ? "header--abs" : "";?>">
@@ -177,178 +178,28 @@
 			</div>
 		</div>
 	</header>
-	
+
 	<div class="location">
 		<i class="icon-close location__close-btn"></i>
-		<form action="" class="search-form location__search">
-			<div class="search-form__inner">
-				<input type="search" class="search-form__input" placeholder="Поиск по городам" required />
-				<i class="icon-close search-form__clear-btn"></i>
-				<button class="btn btn--medium btn--yellow search-form__btn"><i class="icon-magnify btn__icon"></i><span>Найти</span></button>
-			</div>			
-		</form>
-		<div class="location__body">
-			<ul class="location__list">
-				<li>
-					<span>а</span>
-					<ul>					
-						<li><a href="javascript:;">Адыгейский</a></li>
-						<li><a href="javascript:;">Алтайский</a></li>
-						<li><a href="javascript:;">Амурский</a></li>
-						<li><a href="javascript:;">Архангельский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>б</span>
-					<ul>					
-						<li><a href="javascript:;">Башкирский</a></li>
-						<li><a href="javascript:;">Белгородский</a></li>
-						<li><a href="javascript:;">Брянский</a></li>
-						<li><a href="javascript:;">Бурятский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>в</span>
-					<ul>					
-						<li><a href="javascript:;">Владимирский</a></li>
-						<li><a href="javascript:;">Волгоградский</a></li>
-						<li><a href="javascript:;">Воронежский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>д</span>
-					<ul>
-						<li><a href="javascript:;">Дагестанский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>и</span>
-					<ul>					
-						<li><a href="javascript:;">Ивановский</a></li>
-						<li><a href="javascript:;">Ингушский</a></li>
-						<li><a href="javascript:;">Иркутский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>к</span>
-					<ul>					
-						<li><a href="javascript:;">Калининградский</a></li>
-						<li><a href="javascript:;">Калужский</a></li>
-						<li><a href="javascript:;">Камчатский</a></li>
-						<li><a href="javascript:;">Кемеровский</a></li>
-						<li><a href="javascript:;">Кировский</a></li>
-						<li><a href="javascript:;">Коми</a></li>
-						<li><a href="javascript:;">Костромской</a></li>
-						<li><a href="javascript:;">Краснодарский</a></li>
-						<li><a href="javascript:;">Красноярский</a></li>
-						<li><a href="javascript:;">Курский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>л</span>
-					<ul>
-						<li><a href="javascript:;">Липецкий</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>м</span>
-					<ul>
-						<li><a href="javascript:;">Марийский</a></li>
-						<li><a href="javascript:;">Мордовский</a></li>
-						<li><a href="javascript:;">Московский ЦРМБ</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>н</span>
-					<ul>
-						<li><a href="javascript:;">Нижегородский</a></li>
-						<li><a href="javascript:;">Новгородский</a></li>
-						<li><a href="javascript:;">Новосибирский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>о</span>
-					<ul>
-						<li><a href="javascript:;">Омский</a></li>
-						<li><a href="javascript:;">Оренбургский</a></li>
-						<li><a href="javascript:;">Орловский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>п</span>
-					<ul>
-						<li><a href="javascript:;">Пензенский</a></li>
-						<li><a href="javascript:;">Пермский</a></li>
-						<li><a href="javascript:;">Приморский</a></li>
-						<li><a href="javascript:;">Псковский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>р</span>
-					<ul>
-						<li><a href="javascript:;">Ростовский</a></li>
-						<li><a href="javascript:;">Рязанский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>с</span>
-					<ul>
-						<li><a href="javascript:;">Самарский</a></li>
-						<li><a href="javascript:;">Санкт-Петербургский</a></li>
-						<li><a href="javascript:;">Саратовский</a></li>
-						<li><a href="javascript:;">Сахалинский</a></li>
-						<li><a href="javascript:;">Свердловский</a></li>
-						<li><a href="javascript:;">Смоленский</a></li>
-						<li><a href="javascript:;">Ставропольский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>т</span>
-					<ul>
-						<li><a href="javascript:;">Тамбовский</a></li>
-						<li><a href="javascript:;">Татарстанский</a></li>
-						<li><a href="javascript:;">Тверской</a></li>
-						<li><a href="javascript:;">Томский</a></li>
-						<li><a href="javascript:;">Тувинский</a></li>
-						<li><a href="javascript:;">Тульский</a></li>
-						<li><a href="javascript:;">Тюменский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>у</span>
-					<ul>
-						<li><a href="javascript:;">Удмуртский</a></li>
-						<li><a href="javascript:;">Ульяновский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>х</span>
-					<ul>
-						<li><a href="javascript:;">Хабаровский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>ц</span>
-					<ul>
-						<li><a href="javascript:;">Центр корпоративного бизнеса</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>ч</span>
-					<ul>
-						<li><a href="javascript:;">Челябинский</a></li>
-						<li><a href="javascript:;">Чеченский</a></li>
-						<li><a href="javascript:;">Читинский</a></li>
-						<li><a href="javascript:;">Чувашский</a></li>
-					</ul>
-				</li>
-				<li>
-					<span>я</span>
-					<ul>
-						<li><a href="javascript:;">Якутский</a></li>
-						<li><a href="javascript:;">Ярославский</a></li>
-					</ul>
-				</li>
-			</ul>
+		<div class="location__text">
+			<h2>Уточнить местоположение</h2>
+			<p><strong>Мы используем ваше местоположение для уточнения результатов поиска, показа организаций, интересных событий и выгодных предложений поблизости.</strong></p>
 		</div>
+		<form action="" class="small-search location__search">
+			<h3 class="small-search__title">Населенный пункт:</h3>
+			<div class="small-search__inner">
+				<input type="search" name="city" class="small-search__input" placeholder="Поиск по городам" required />
+				<ul class="small-search__details">
+					<li><strong>Мо</strong>жайск</li>
+					<li><strong>Мо</strong>здок</li>
+					<li><strong>Мо</strong>розовск</li>
+					<li><strong>Мо</strong>сква</li>
+				</ul>
+			</div>
+			<label class="option small-search__option">
+				<input type="checkbox" class="checkbox-alt">
+				<span>Автоматически определять местоположение</span>
+			</label>
+		</form>
+
 	</div>

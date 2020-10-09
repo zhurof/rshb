@@ -1,0 +1,962 @@
+﻿/*Общее*/
+.btn
+	&--huge
+		font-size: 22px
+		line-height: 68px
+		padding: 0 61px
+	&--block
+		padding: 0 10px
+.file-link
+	&[href$=".pdf"]
+		background-image: url(../img/icons/new/pdf.svg)
+	&[href$=".doc"]
+		background-image: url(../img/icons/new/doc.svg)
+	&[href$=".xls"]
+		background-image: url(../img/icons/new/xls.svg)
+	&[href$=".jpg"]
+		background-image: url(../img/icons/new/jpg.svg)
+	&[href$=".png"]
+		background-image: url(../img/icons/new/png.svg)
+		
+.select
+	&__output
+		&:empty:before
+			content: attr(data-placeholder)
+			color: #808080
+	&__list
+		&--multiple
+			>li
+				&:before
+					content: '\e920'
+					font-family: icomoon
+					font-size: 15/22*1em
+					color: transparent
+					margin: 0 1em 0 0
+				&.selected
+					color: #238441
+					&:before
+						color: inherit
+		
+.checkbox-alt
+	&:before
+		display: none
+	background: 
+		size: 60% auto
+		position: center
+		repeat: no-repeat
+	&:checked
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQuNDEiIGhlaWdodD0iMTEuMTIiIHZpZXdCb3g9IjAgMCAxNC40MSAxMS4xMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxwYXRoIGQ9Im00LjcwNyA4LjI5My0zLjI5My0zLjI5My0xLjQxNCAxLjQxNCA0LjcwNyA0LjcwNyA5LjcwNy05LjcwNy0xLjQxNC0xLjQxNHoiIGZpbGw9IiMyMzg0NDEiLz4KPC9zdmc+Cg==)
+		
+/*Убираем background-attachment: fixed на IE, т.к. там он дергается (блок на главной странице)*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+	.about-block__banner
+		background-attachment: scroll
+		
+/*Окно выбора города*/
+.small-search
+	&__title
+		font-weight: 600
+		margin: 0 0 16/28*1em
+	&__inner
+		position: relative
+		margin: 0 0 1em
+		&:last-child
+			margin-bottom: 0
+		&:after
+			content: '\e90c'
+			font: normal normal 20px/1 icomoon
+			display: inline-block
+			position: absolute
+			right: 34px
+			top: calc(50% - .5em)
+	&__input
+		margin: 0
+		padding-right: 70px
+	&__details
+		display: none
+		font-size: 22px
+		line-height: 1.1
+		list-style: none
+		padding: 20px 0
+		position: absolute
+		left: 0
+		width: 100%
+		z-index: 1
+		top: calc(100% + 15px)
+		background-color: #fff
+		border-radius: 10px
+		box-shadow: 0 0 10px rgba(0,0,0,.2)
+		color: #C7C7C7
+		max-height: 260px
+		overflow: auto
+		strong
+			color: #262626
+			font: inherit
+		>li
+			margin: 0
+			padding: 12/22*1em 36px
+			cursor: pointer
+	&__option
+		font-size: 22/24*1em
+.location
+	&__text
+		max-width: 960px
+		line-height: 1.51
+		margin: 0 0 36/24*1em
+		&:last-child
+			margin-bottom: 0
+		h2
+			font-size: 1.5em
+			font-weight: 600
+			margin: 0 0 .75em
+			&:last-child
+				margin-bottom: 0
+				
+/*Страница "Команда"*/
+.person-card
+	cursor: pointer
+	-webkit-tap-highlight-color: transparent
+.person
+	display: none
+	width: 990px
+	max-width: 100%
+	padding: 63px 55px 68px
+	background-color: #fff
+	border-radius: 10px
+	font-size: 22px
+	.fancybox-close-small
+		width: 40px
+		height: 40px
+		padding: 0 
+		top: 30px
+		right: 40px
+	&__inner
+		display: flex
+		align-items: flex-start
+	&__img
+		width: 184px
+		height: 184px
+		flex: 0 0 auto
+		margin: 0 52px 0 0
+		border-radius: 50%
+		object-fit: cover
+		object-position: center
+	&__text
+		width: calc(100% - 236px)
+		flex: 1 1 auto
+	&__head
+		margin: 0 0 40/22*1em
+		&:last-child
+			margin-bottom: 0
+	&__title
+		font-weight: 600
+		margin: 0 0 8/28*1em
+	&__position
+		line-height: 1.1
+		color: rgba(38,38,38,.5)
+	&__body
+		h4
+			font-size: 26/24*1em
+			margin-bottom: 16/26*1em
+			&:last-child
+				margin-bottom: 0
+/*этот блок уже встречался на странице продукта. В модальном окне использую его модифицированную версию.*/
+.infographics	
+	&--small
+		margin: 0 0 37/22*1em
+		&:last-child
+			margin-bottom: 0
+	&__box
+		&--small
+			margin: 0 -15px
+			&:not(:empty)
+				margin-bottom: -15px
+	&__item
+		&--small
+			width: 138px
+			margin: 15px
+		&-pic
+			&--small
+				width: 64px
+				height: 64px
+				margin: 0 0 17px
+				
+/*Страница "Где купить"*/
+[class*="cluster-content__header"],
+[class*="balloon-content__header"]
+	display: none !important
+.custom-baloon
+	width: 300px
+	padding: 20px
+	font-size: 16px
+	&__head
+		font-size: 20/16*1em		
+		p
+			margin: 0 0 12/20*1em
+	&__title
+		font-size: 1.2em
+		margin: 0 0 .3em
+	&__body
+		color: #808080
+		p
+			margin: 0 0 2/16*1em
+			&:last-child
+				margin-bottom: 0
+.branch-card
+	width: 729px
+	background-color: #F4F5F6
+	padding: 30px 36px
+	display: flex
+	font-size: 18px
+	margin: 0 15px 30px
+	&__head
+		width: 50%
+		padding-right: 15px
+		color: #808080
+		p
+			margin: 0 0 4/18*1em
+			&:last-child
+				margin-bottom: 0
+	&__title
+		font-size: 24/18*1em
+		font-weight: 600
+		color: #262626
+		margin: 0 0 .25em
+	&__body
+		font-size: 20/18*1em
+		p
+			margin: 0 0 9/20*1em
+			&:last-child
+				margin-bottom: 0
+.branches
+	padding: 0 0 128px
+	&__head
+		margin: 0 0 12px
+		&:last-child
+			margin-bottom: 0
+	&__nav
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-end
+		list-style: none
+		background: linear-gradient(#C7C7C7,#C7C7C7) no-repeat left bottom/auto 2px
+		font-size: 26/24*1em
+		line-height: 1.22
+		padding: 0
+		margin: 0 0 35px
+		&:last-child
+			margin-bottom: 0
+		>li
+			display: inline-block
+			margin: 0
+			padding: 16/26*1em 36/26*1em
+			cursor: pointer
+			user-select: none
+			border-bottom: 2px solid #C7C7C7
+			&.active
+				cursor: default
+				color: #238441
+				border-color: #238441
+	&__search
+		margin: 0 0 24px
+		&:last-child
+			margin-bottom: 0
+	&__filter
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: flex-start
+		&-field
+			width: calc(50% - 12px)
+			margin: 0 0 24px		
+	&__tab
+		display: none
+	&__map
+		height: 764px
+		background-color: #F4F5F6
+		
+/*Личный кабинет*/
+.field
+	position: relative
+	margin: 0 0 16px
+	&:last-child
+		margin-bottom: 0
+	&--captcha
+		height: 84px
+		background-color: #fff
+		text-align: center
+		line-height: 84px
+		img
+			max-height: 90%
+			vertical-align: middle
+	&__input
+		display: block
+		margin: 0
+		width: 100%
+		&:not(:first-child)
+			padding-right: 70px
+	&__message
+		display: block
+		width: 420px
+		background-color: #fff
+		color: #E84141
+		font-size: 16px
+		line-height: 1.35
+		padding: 14/16*1em 20/16*1em
+		position: absolute
+		z-index: 3
+		left: calc(100% + 18px)
+		top: 50%
+		transform: translateY(-50%)
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: -11px
+			top: calc(50% - 9px)
+			border-right: 11px solid #fff
+			border-top: 9px solid transparent
+			border-bottom: 9px solid transparent
+	&__icon
+		line-height: 1
+		font-size: 20px
+		position: absolute
+		top: calc(50% - .5em)
+		right: 35px
+		color: #C7C7C7
+		&--pass
+			cursor: pointer
+		&--white
+			color: #fff
+		&.icon-calendar,
+		&.icon-calendar-alt
+			pointer-events: none
+.account
+	display: flex
+	color: #fff
+	&__sidebar
+		width: 640px
+		min-height: 100vh
+		background-color: #238441
+		flex: 0 0 auto
+		padding: 65px 63px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		font-size: 18px
+		line-height: 1.51
+	&__logo
+		width: 248px
+		margin: 0 auto 37px
+	&__body
+		width: 100%
+		margin: 0 0 84px
+		&:last-child
+			margin-bottom: 0
+	&__menu
+		list-style: none
+		padding: 0
+		color: rgba(255,255,255,.5)
+		display: flex
+		text-align: center
+		font-size: 22/18*1em
+		line-height: normal
+		margin: 0 0 36px
+		&:last-child
+			margin-bottom: 0
+		>li
+			width: 50%
+			margin: 0
+			>a
+				display: block
+				color: inherit
+				padding: 19/22*1em
+				border-bottom: 2px solid
+			&.active>a
+				color: #fff
+	&__form
+		margin: 0 0 2em
+		&:last-child
+			margin-bottom: 0
+		[type=text],
+		[type=tel],
+		[type=email],
+		[type=url],
+		[type=password],
+		select,
+		textarea,
+			color: inherit
+			border-color: #C7C7C7
+		input,textarea
+			&::-webkit-input-placeholder 
+				color: rgba(255,255,255,.5)
+			&::-moz-placeholder 
+				color: rgba(255,255,255,.5)
+			&:-ms-input-placeholder
+				color: rgba(255,255,255,.5)
+	&__submit-btn
+		margin-top: 24px
+		&:first-child
+			margin-top: 0
+	&__tool
+		display: inline-block
+		color: inherit
+		border-bottom: 1px solid
+		i
+			font-size: 13/18*1em
+			vertical-align: .1em
+	&__text
+		margin: 0 0 32/18*1em
+		&:last-child
+			margin-bottom: 0
+		a
+			color: inherit
+			text-decoration: underline
+			text-underline-position: under
+		p
+			margin: 0 0 1.5em
+			&:last-child
+				margin-bottom: 0
+	&__nav
+		display: flex
+		align-items: center
+		justify-content: space-between
+		max-width: 455px
+	&__back-btn
+		display: inline-block
+		color: inherit
+		font-size: 22/18*1em
+		line-height: 1.22
+	&__next-btn
+		min-width: 240px
+	&__footer
+		width: 100%
+		margin-top: auto
+		&-btn
+			margin: 0 0 32px
+			&:last-child
+				margin-bottom: 0
+	&__contacts
+		display: flex
+		flex-wrap: wrap
+	&__contact
+		width: 50%
+		padding-right: 15px
+		&-link
+			display: block
+			width: max-content
+			max-width: 100%
+			color: inherit
+			border-bottom: 1px solid
+			line-height: 1.1
+			font-size: 24/18*1em
+			margin: 0 0 4/24*1em
+			&:last-child
+				margin-bottom: 0
+		&-caption
+			display: block
+			opacity: .7
+		
+	&__slider
+		width: calc(100% - 640px)
+		flex: 1 1 auto
+		.slick-list
+			display: flex
+			min-height: 100%
+		.slick-track
+			flex: 0 0 auto
+			display: flex
+	&__slide
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		align-items: flex-start
+		min-height: 100vh
+		background: 
+			size: cover
+			position: center
+			repeat: no-repeat
+		padding: 185px
+		position: relative
+		&:not(.slick-slide):nth-child(n+2)
+			display: none
+		&.slick-slide
+			height: auto
+			display: flex
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0))
+		&-text
+			position: relative
+			width: 100%
+			max-width: 480px
+			font-size: 18px
+			margin: 0 0 64px
+			&:last-child
+				margin-bottom: 0
+			h2
+				font-size: 72px
+				line-height: 1
+				margin: 0 0 24/72*1em
+				&:last-child
+					margin-bottom: 0
+		&-btn
+			position: relative
+	&__arrow
+		display: block
+		cursor: pointer
+		width: 44px
+		height: 44px
+		border: 1.5px solid
+		border-radius: 50%
+		text-align: center
+		line-height: 41px
+		font-size: 18px
+		position: absolute
+		z-index: 2
+		bottom: 338px
+		&--prev
+			left: 64px
+		&--next
+			right: 64px
+	&__dots
+		list-style: none
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		position: absolute
+		bottom: 108px
+		left: 185px
+		z-index: 2
+		>li
+			display: inline-block
+			width: 12px
+			height: 12px
+			border-radius: 50%
+			background-color: currentColor
+			opacity: .35
+			margin: 0 18px 0 0
+			&.slick-active
+				opacity: 1
+			
+@keyframes progress
+	form
+		background-size: 0 auto
+	to
+		background-size: 100% auto
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 5
+	background-color: #238441
+	color: #fff
+	font-size: 18px
+	line-height: 1.51
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	&__bar
+		width: 100%
+		height: 5px
+		background: linear-gradient(#FFCB05,#FFCB05) no-repeat left center/0 auto
+		&--animate
+			animation: progress 2s linear forwards
+	&__logo
+		height: 65px
+		margin: 60px 0 30px
+	&__counter
+		font-size: 128px
+		margin: auto
+		line-height: 1
+		&:after
+			content: '%'
+			color: rgba(255,255,255,.5)
+	&__text
+		min-height: 160px
+		padding: 64px
+		
+@media(min-width: 992px)
+	select
+		&[multiple]
+			background: none
+			scrollbar-color: #808080 transparent
+			scrollbar-width: thin
+			&::-webkit-scrollbar
+				width: 5px
+				height: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: #808080
+	.btn
+		&--white:hover
+			border-color: #262626
+	/*Окно выбора города*/
+	.small-search
+		&__details
+			scrollbar-color: #808080 transparent
+			scrollbar-width: thin
+			&::-webkit-scrollbar
+				width: 5px
+				height: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: #808080
+			>li
+				&:hover
+					background-color: #238441
+					color: rgba(255,255,255,.5)
+					strong
+						color: #fff
+	/*личный кабинет*/
+	.account
+		&__sidebar
+			scrollbar-color: #808080 transparent
+			scrollbar-width: thin
+			&::-webkit-scrollbar
+				width: 5px
+				height: 5px
+			&::-webkit-scrollbar-thumb
+				background-color: #808080
+		&__arrow
+			transition: all .3s ease
+			&:hover
+				background-color: #fff
+				border-color: #fff
+				color: #262626
+	
+@media(max-width: 1519px)
+	/*Страница "Команда"*/
+	.person
+		font-size: inherit
+	.infographics
+		&__box
+			&--small
+				margin: 0 -15px
+				&:not(:empty)
+					margin-bottom: -15px
+		&__item
+			&--small
+				margin: 15px
+				width: 138px
+	/*Страница "Где купить"*/
+	.branch-card
+		width: 570px
+		padding: 20px 30px
+		font-size: 16px
+	.branches
+		&__map
+			height: 600px
+			
+	/*Личный кабинет"*/
+	.account
+		&__sidebar
+			width: 520px
+			padding: 40px
+			font-size: 16px
+		&__logo
+			margin-bottom: 24px
+		&__body
+			margin-bottom: 60px
+		&__slider
+			width: calc(100% - 520px)
+		&__slide
+			padding: 120px 80px
+			&-text
+				margin: 0 0 45px
+		&__arrow
+			&--prev
+				left: 15px
+			&--next
+				right: 15px
+		&__dots
+			bottom: 40px
+			left: 80px
+@media(max-width: 1199px)
+	.btn
+		&--huge
+			font-size: 18px
+			padding: 0 40px
+			line-height: 45px
+			border-width: 1px
+		&--block
+			padding: 0 10px
+	/*Окно выбора города*/
+	.small-search
+		&__inner
+			&:after
+				right: 20px
+				font-size: 18px
+		&__input
+			padding-right: 50px
+		&__details
+			font-size: 14px
+			top: 100%
+			padding: .5em 0
+			>li
+				padding: .5em 20px
+	.location
+		&__text
+			max-width: 620px
+		&__search
+			max-width: 620px
+	/*Страница "Команда"*/
+	.person
+		padding: 30px
+		width: 820px
+		&__img
+			margin: 0 30px 0 0
+	.infographics
+		&__item
+			font-size: inherit
+			&-pic
+				width: 6em
+				height: 6em
+				margin: 0 0 1em
+	/*Страница "Где купить"*/
+	.branch-card
+		font-size: inherit
+		width: calc(100% - 30px)
+		flex: 1 1 auto
+		margin: 0 15px 10px
+	.branches
+		&__nav
+			margin-bottom: 20px
+		&__search
+			margin-bottom: 20px
+		&__filter
+			&-field
+				width: calc(50% - 10px)
+				margin: 0 0 20px
+	/*Личный кабинет*/
+	.preloader
+		font-size: inherit
+		&__logo
+			margin: 30px 0 0
+		&__counter
+			font-size: 6em
+		&__text
+			min-height: 0
+			padding: 30px
+	.field
+		&--captcha
+			height: 59px
+			line-height: 59px
+		&__icon
+			right: 20px
+		&__input
+			&:not(:first-child)
+				padding-right: 50px
+		&__message
+			width: 320px
+			font-size: 14px
+	.account
+		&__sidebar
+			font-size: inherit
+			width: 480px
+			padding: 30px
+		&__menu
+			margin: 0 0 1em
+		&__slider
+			width: calc(100% - 480px)
+		&__slide
+			padding: 115px 30px
+			&-text
+				font-size: inherit
+				h2
+					font-size: 3em
+		&__dots
+			left: 30px
+		
+@media(max-width:991px)	
+	.btn
+		&--big
+			font-size: 14px
+			line-height: 40px
+			padding: 0 32px
+		&--block
+			padding: 0 10px
+	/*Страница "Команда"*/
+	.person
+		width: 700px
+		padding: 20px 15px
+		.fancybox-close-small
+			top: 0
+			right: 0
+		&__img
+			width: 120px
+			height: 120px
+	.infographics
+		&__box
+			margin: 0 -10px
+			&:not(:empty)
+				margin-bottom: -10px
+		&__item
+			width: calc(50% - 20px)
+			margin: 10px
+	/*Страница "Где купить"*/
+	.branches
+		&__nav
+			margin-bottom: 15px
+			background-size: auto 1px
+			>li
+				border-width: 1px
+		&__search
+			margin-bottom: 15px
+		&__filter
+			&-field
+				width: calc(50% - 7.5px)
+				margin: 0 0 15px
+		&__map
+			height: 500px
+	/*Личный кабинет*/
+	.field
+		margin: 0 0 10px
+		&__message
+			font-size: 12px
+			width: 250px
+		&__icon
+			font-size: 16px
+	.account
+		&__sidebar
+			width: 50%
+		&__submit-btn
+			margin-top: 18px
+		&__slider
+			width: 50%
+		&__slide
+			padding: 100px 30px
+			&-text
+				margin: 0 0 30px
+			
+@media(max-width:767px)
+	.btn
+		&--huge
+			font-size: 18px
+			line-height: 43px
+	/*Страница "Команда"*/
+	.person
+		&__inner
+			display: block
+		&__img
+			display: block
+			width: 160px
+			height: 160px
+			margin: 0 0 20px
+		&__text
+			width: auto
+	.infographics
+		&__box
+			display: block
+			margin: 0
+			&:not(:empty)
+				margin: 0
+		&__item
+			width: auto
+			margin: 0 0 30px
+			&:last-child
+				margin-bottom: 0
+			&-pic
+				margin: 0 0 1em
+	/*Страница "Где купить"*/
+	.custom-baloon
+		width: 250px
+		padding: 0
+		font-size: 14px
+	.branch-card
+		display: block
+		&__head
+			width: auto
+			padding: 0
+			margin: 0 0 1em
+			&:last-child
+				margin-bottom: 0
+		&__body
+			width: auto
+	.branches
+		padding: 0 0 60px
+		&__head
+			margin: 0 0 20px
+		&__nav
+			background: none
+			flex-wrap: wrap
+			text-align: center
+			>li
+				flex: 1 1 auto
+				border-color: #C7C7C7
+		&__filter
+			display: block
+			&-field
+				width: 100%
+	/*Личный кабинет*/
+	.field
+		&--captcha
+			height: 49px
+			line-height: 49px
+		&__message
+			left: 0
+			width: 100%
+			top: calc(100% + 5px)
+			transform: none
+			&:before
+				border-left: 9px solid transparent
+				border-right: 9px solid transparent
+				border-top: none
+				border-bottom: 11px solid #fff
+				left: 20px
+				top: -10px				
+	.account
+		display: block
+		position: relative
+		&__sidebar
+			width: auto
+			position: relative
+			z-index: 2
+			background-color: rgba(35,132,65,.85)
+		&__menu
+			font-size: inherit
+		&__next-btn
+			min-width: 0
+		&__slider
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+		&__slide
+			padding: 0
+			&-text
+				display: none
+			&-btn
+				display: none
+	
+@media(max-width:479px)
+	.search-form
+		&__input
+			padding-right: 120px
+	/*Страница "Где купить"*/
+	.branch-card
+		padding: 20px 15px
+	/*Личный кабинет*/
+	.account
+		&__sidebar
+			padding: 30px 15px
+		&__logo
+			width: 180px
+			margin: 0 auto 10px
+		&__contacts
+			display: block
+		&__contact
+			width: auto
+			padding: 0
+			margin: 0 0 .7em
+			&:last-child
+				margin-bottom: 0

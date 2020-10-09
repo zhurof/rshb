@@ -37,8 +37,9 @@ $(window).scroll(function(){
 	scrollTop = pageYOffset;
 })
 
+
 //Специально для "любимого" IE, который не поддерживает position: sticky. Прилипание содержимого сайдбара к верху
-if(navigator.userAgent.indexOf('Trident') != -1 && $('.sidebar .sidebar__inner').length){
+if(navigator.userAgent.indexOf('Trident') != -1 && $('.sidebar .sidebar__inner').length){	
 	var headerHeight = $('.header__bottomline').outerHeight(),
 			sidebar = $('.sidebar'),
 			sidebarHeight = $('.sidebar').outerHeight(),
@@ -126,6 +127,8 @@ $('.header__menu-list a:not(:only-child)').click(function(e){
 		$('.header__menu-list>.open').not($(this).parent()).removeClass('open').children('ul').slideUp(300);
 	}
 })
+
+//местоположение
 $('.header__location').click(function(e){
 	e.preventDefault();
 	$('.location').fadeIn(300)
@@ -133,11 +136,45 @@ $('.header__location').click(function(e){
 $('.location__close-btn').click(function(){
 	$(this).closest('.location').fadeOut(300)
 })
-$('.location__list a').click(function(e){
+$('.location__search').submit(function(e){
 	e.preventDefault();
-	var value = $(this).text();
-	$('.header__location span').text(value);
-	$('.location').fadeOut(300)
+})
+var russia = [];
+$.getJSON('/russia.json',function(json){
+	russia = json;
+})
+$('.small-search__input').on('input focus',function(){
+	var list = $(this).siblings('.small-search__details');
+	
+	if(this.value.length > 2){
+		var reg = new RegExp('('+this.value+')', 'i');
+		var result = russia.filter(function(item, index, array){return reg.test(item.city)})
+		
+		list.empty()
+		
+		for(var i=0;i<result.length;i++){
+			list.append('<li>'+result[i].city.replace(reg,'<strong>$1</strong>')+'</li>');
+		}
+		if(result.length){
+			list.show()
+		}else{
+			list.hide();
+		}
+	}else{
+		list.hide();
+	}
+})
+$('.small-search__input').blur(function(){
+	var list = $(this).siblings('.small-search__details');
+	setTimeout(function(){
+		list.hide()
+	},100)
+})
+$(document).on('click','.small-search__details li',function(){
+	$(this).parent().siblings('.small-search__input').val(this.innerText)
+	
+	$('.header__location span').text(this.innerText);
+	$('.location').fadeOut(300);
 })
 
 //
@@ -312,7 +349,10 @@ function initMap(){
 		center: [55.755814,37.617635],
 		zoom: 10.5
 	}),
-	objectManager = new ymaps.ObjectManager();
+	objectManager = new ymaps.ObjectManager({
+		clusterize: true,
+		gridSize: 190
+	});
 	
 	objectManager.objects.options.set({
 		iconLayout: 'default#image',
@@ -320,14 +360,14 @@ function initMap(){
 		iconImageSize: [36, 36],
 		iconImageOffset: [-18, -18]
 	});
+	objectManager.clusters.options.set('clusterIconColor', '#238441');
+	
 	myMap.geoObjects.add(objectManager);
 	
-	
-	$.ajax({
-		url: "/map-geopoints.json"
-	}).done(function(data) {
-		objectManager.add(data);
-	});
+	var jsonString = $('#map-data').text();
+	if(jsonString){
+		objectManager.add(JSON.parse(jsonString));
+	}
 }
 
 $('.date-input').datepicker({
@@ -337,7 +377,7 @@ $('.date-input').datepicker({
 
 //Кастомный select
 $('.select').blur(function(){
-	$(this).removeClass('select--open');
+	$(this).removeClass('select--open');	
 })
 $('.select').click(function(e){
 	if(!$(e.target).closest('.select__list,.select__input').length){
@@ -346,21 +386,47 @@ $('.select').click(function(e){
 })
 $('.select__list>li').click(function(){
 	var value = $(this).attr('data-value') || $(this).text(),
-			select = $(this).parents('.select');
-			
-	select.removeClass('select--open');
-	select.find('.select__input').val(value).trigger('change');
+			select = $(this).parents('.select'),
+			input = select.find('.select__input'),
+			multiple = input.prop('multiple');
+	
+	if(multiple){
+		var selectedStatus = !$(this).is('.selected');
+		
+		input.children().each(function(){
+			if(this.value == value){
+				this.selected = selectedStatus;
+			}
+		})
+		input.trigger('change')
+		
+	}else{
+		select.removeClass('select--open');
+		input.val(value).trigger('change');
+	}	
 })
 $('.select__input').on('change',function(){
 	var wrapper = $(this).parent('.select'),
 			textValue = $(this).children(':selected').text();
-	if(this.value){
-		//wrapper.addClass('select--filled')
-		wrapper.find('.select__output').text(textValue);	
-	}else{
-		//wrapper.removeClass('select--filled')
-		wrapper.find('.select__output').text('');
+	if(this.multiple){
+		var valuesArray =  $(this).children(':selected').toArray();
+		valuesArray.forEach(function(item, index, array){
+			array[index] = item.value;
+		})
+		textValue = valuesArray.join('; ');
+		
+		wrapper.find('.select__list li').each(function(){
+			var value = $(this).attr('data-value') || $(this).text();
+			if(valuesArray.indexOf(value) != -1){
+				$(this).addClass('selected')
+			}else{
+				$(this).removeClass('selected')
+			}
+		})
+		
 	}	
+			
+	wrapper.find('.select__output').text(textValue);	
 })
 
 $('form').on('reset',function(){	
@@ -412,4 +478,12 @@ $('.accordion__trigger').click(function(){
 $('.accordion__btn').click(function(){
 	$(this).closest('.accordion').find('.accordion__item').filter(':hidden').fadeIn(300)
 	$(this).remove()
+})
+
+$('.branches__nav li').click(function(){
+	var index = $(this).index();
+	if(!$(this).is('.active')){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).closest('.branches').find('.branches__tab').hide().eq(index).fadeIn(300);
+	}
 })

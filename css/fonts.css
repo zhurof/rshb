@@ -169,3 +169,18 @@
 .icon-wallet:before {
   content: "\e91f";
 }
+.icon-check:before {
+  content: "\e920";
+}
+.icon-calendar-alt:before {
+  content: "\e921";
+}
+.icon-eye-slash:before {
+  content: "\e922";
+}
+.icon-info:before {
+  content: "\e923";
+}
+.icon-repeat:before {
+  content: "\e924";
+}

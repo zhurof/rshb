@@ -57,6 +57,80 @@
 			</div>
 		</div>
 	</main>
+	<script type="application/json" id="map-data">
+		{
+			"type": "FeatureCollection",
+			"features": [
+				{
+					"type": "Feature",
+					"id": 0,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.720747,37.443646]
+					},
+					"properties": {
+						"hintContent": "Офис 1",
+						"balloonContentHeader": "Офис 1"
+					}
+				},{
+					"type": "Feature",
+					"id": 1,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.690440, 37.545161]
+					},
+					"properties": {
+						"hintContent": "Офис 2",
+						"balloonContentHeader": "Офис 2"
+					}
+				},{
+					"type": "Feature",
+					"id": 2,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.746863, 37.601558]
+					},
+					"properties": {
+						"hintContent": "Офис 3",
+						"balloonContentHeader": "Офис 3"
+					}
+				},{
+					"type": "Feature",
+					"id": 3,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.783263, 37.597280]
+					},
+					"properties": {
+						"hintContent": "Офис 4",
+						"balloonContentHeader": "Офис 4"
+					}
+				},{
+					"type": "Feature",
+					"id": 4,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.736770, 37.639675]
+					},
+					"properties": {
+						"hintContent": "Офис 5",
+						"balloonContentHeader": "Офис 5"
+					}
+				},{
+					"type": "Feature",
+					"id": 5,
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.749495, 37.661067]
+					},
+					"properties": {
+						"hintContent": "Офис 6",
+						"balloonContentHeader": "Офис 6"
+					}
+				}
+			]
+		}
+	</script>
 	<!-- api карт грузим только там, где надо. Для производительности -->
 	<script  src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&#038;ver=1"></script>
 <? include "footer.php";?>	
