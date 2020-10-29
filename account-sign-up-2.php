@@ -62,31 +62,43 @@
 			</div>
 		</div>
 		<div class="account__slider">
-			<div class="account__slide" style="background-image:url(img/account.jpg)">
+			<div class="account__slide" style="background-image:url(img/account/0.jpg)">
 				<div class="account__slide-text">
-					<h2>Здоровье <br>под защитой</h2>
-					<p>Страхование от&nbsp;несчастных случаев и&nbsp;болезней с&nbsp;дополнительным сервисом оценки состояния здоровья</p>
+					<h2>Заголовок в&nbsp;две строки</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3>от 12 000 р.</h3>
 				</div>
 				<a href="product.php" class="btn btn--big btn--green account__slide-btn">Оформить</a>
 			</div>
-			<div class="account__slide" style="background-image:url(img/top/1.jpg)">
+			<div class="account__slide" style="background-image:url(img/account/1.jpg)">
 				<div class="account__slide-text">
-					<h2>Мечты под защитой</h2>
-					<p>Программа, с которой мечты сбываются!</p>
+					<h2>Заголовок в&nbsp;две строки</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3>от 12 000 р.</h3>
 				</div>
 				<a href="product.php" class="btn btn--big btn--green account__slide-btn">Оформить</a>
 			</div>
-			<div class="account__slide" style="background-image:url(img/account.jpg)">
+			<div class="account__slide" style="background-image:url(img/account/2.jpg)">
 				<div class="account__slide-text">
-					<h2>Злолотой запас</h2>
-					<p>Сохраните привычный уровень жизни в&nbsp;зрелом возрасте! Накопите на&nbsp;прибавку к&nbsp;зарплате или&nbsp;пенсии.</p>
+					<h2>Заголовок в&nbsp;две строки</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3>от 12 000 р.</h3>
 				</div>
 				<a href="product.php" class="btn btn--big btn--green account__slide-btn">Оформить</a>
 			</div>
-			<div class="account__slide" style="background-image:url(img/top/1.jpg)">
+			<div class="account__slide" style="background-image:url(img/account/3.jpg)">
 				<div class="account__slide-text">
-					<h2>Безусловный доход</h2>
-					<p>Программа с&nbsp;фиксированным доходом выше депозита.</p>
+					<h2>Заголовок в&nbsp;две строки</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3>от 12 000 р.</h3>
+				</div>
+				<a href="product.php" class="btn btn--big btn--green account__slide-btn">Оформить</a>
+			</div>
+			<div class="account__slide" style="background-image:url(img/account/4.jpg)">
+				<div class="account__slide-text">
+					<h2>Заголовок в&nbsp;две строки</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h3>от 12 000 р.</h3>
 				</div>
 				<a href="product.php" class="btn btn--big btn--green account__slide-btn">Оформить</a>
 			</div>

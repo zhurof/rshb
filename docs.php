@@ -47,19 +47,19 @@
 								<span class="file-link__title">Правила страхования жизни №2-НСЖ (действуют с 23.03.2020)</span>
 								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
 							</a>
-							<a href="document.pdf" class="file-link" target="_blank">
+							<a href="document.doc" class="file-link" target="_blank">
 								<span class="file-link__title">Правила страхования жизни №1-РСЖ (действуют с 20.01.2020)</span>
 								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
 							</a>
-							<a href="document.pdf" class="file-link" target="_blank">
+							<a href="document.xls" class="file-link" target="_blank">
 								<span class="file-link__title">Правила страхования жизни №1-НСЖ от 25.04.2019 (действуют с 25.04.2019)</span>
 								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
 							</a>
-							<a href="document.pdf" class="file-link" target="_blank">
+							<a href="img/account.jpg" class="file-link" target="_blank">
 								<span class="file-link__title">Заявление на отказ от договора страхования после периода охлаждения</span>
 								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
 							</a>
-							<a href="document.pdf" class="file-link" target="_blank">
+							<a href="img/chair.png" class="file-link" target="_blank">
 								<span class="file-link__title">Заявление на отказ от договора страхования в период охлаждения</span>
 								<span class="file-link__info">(276 КB, 12 декабря 2019)</span>
 							</a>

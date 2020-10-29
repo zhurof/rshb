@@ -487,3 +487,13 @@ $('.branches__nav li').click(function(){
 		$(this).closest('.branches').find('.branches__tab').hide().eq(index).fadeIn(300);
 	}
 })
+
+//Фикс для модального окна в IE
+if(navigator.userAgent.indexOf('Trident') != -1){
+	$.fancybox.defaults.animationEffect = false;	
+	$(document).on('afterShow.fb afterLoad.fb', function(e,instance,slide) {
+		setTimeout(function(){
+			slide.$slide.scrollTop(0)
+		},1)
+	});
+}
